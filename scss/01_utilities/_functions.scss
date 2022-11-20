@@ -126,7 +126,6 @@
 
 
 
-//Pow
 // @function pow($number, $exponent) {
 //     $value: 1;
   
@@ -148,13 +147,35 @@
 //     @return pow(1.2, $index) * 16px;
 // }
 
-// @for $i from 1 to 6 {
-//     .g--font-size-#{$i}s{
-//         font-size: getFontSizePro(-$i);
-//     }
-
-//     .g--font-size-#{$i}l{
-//         font-size: getFontSizePro($i);
+// @for $i from 0 to 6 {
+//     @if $i == 0{
+//         .g--font-size{
+//             font-size: getFontSizePro($i);
+//         }
+//     }@else{
+//         .g--font-size-#{$i}s{
+//             font-size: getFontSizePro(-$i);
+//         }
+//         .g--font-size-#{$i}l{
+//             font-size: getFontSizePro($i);
+//         }
 //     }
 // }
+
+
+// @for $var from -3 to 7 {
+//     $name:"";
+//     @if $var<0 {
+//       $name:$var+"s";
+//     }
+//     @if $var==0 {
+//       $name:"";
+//     }
+//     @if $var>0 {
+//       $name:"-"+$var+"l";
+//     }
+//     .g--fonts-size#{$name}{
+//       font-size: getFontSize2($var);
+//     }
+//   }
 
