@@ -59,11 +59,19 @@
         color:  getColor("rojo", 3);
     }
 
-    &--search{
-        @include custom-style();
-        font-weight: getFontWeight(5);
-        text-decoration: none;
+    &--banner{
+     
+        // color: getColors("blanco",1);
+    
+        // background: transparent;
+    
+        // border-radius: getBorderRadius(8) ;
+        // border: 2px solid;
+        // //@include border-radius(8);
+        // border-color: getColors("blanco",1);
     }
+
+  
 
 
 }

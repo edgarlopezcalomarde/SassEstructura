@@ -4,3 +4,20 @@
         font-size: $size;
     }
 }
+
+
+@each $media, $medvalue in $medias {
+
+    @media (min-width: $medvalue) {
+        
+        @each $fontkey, $fontvalue in  $font-sizes {
+            .g--font-size-#{$fontkey}\@#{$media} {
+                font-size: $fontvalue;
+            }
+        
+        }
+       
+
+    }
+}
+  

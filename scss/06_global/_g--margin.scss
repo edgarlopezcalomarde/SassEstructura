@@ -33,6 +33,46 @@
 }
 
 
+@each $media, $medvalue in $medias {
+    @media (min-width: $medvalue) {
+        @each $key in getMarginKeys(){
+
+            .g--margin-#{$key}\@#{$media}{
+                margin: getMargin($key);
+            }
+            
+            .g--margin-horizontal-#{$key}\@#{$media}{
+                margin-left: getMargin($key);
+                margin-right: getMargin($key);
+            }
+        
+            .g--margin-vertical-#{$key}\@#{$media}{
+                margin-top: getMargin($key);
+                margin-bottom: getMargin($key);
+            }
+        
+            .g--margin-top-#{$key}\@#{$media}{
+                margin-top: getMargin($key);
+            }
+        
+            .g--margin-bottom-#{$key}\@#{$media}{
+                margin-bottom: getMargin($key);
+            }
+        
+            .g--margin-left-#{$key}\@#{$media}{
+                margin-left: getMargin($key);
+            }
+        
+            .g--margin-right-#{$key}\@#{$media}{
+                margin-right: getMargin($key);
+            }
+        
+        }
+        
+         
+    }
+}
+  
 
 
 

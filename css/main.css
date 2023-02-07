@@ -746,61 +746,63 @@ table {
   background-color: #FFFFFF;
   color: #DC2828;
 }
-.c-button--search {
-  border-radius: 0px;
-  border: 0;
-  background-color: #f8f8f8;
-  border-bottom: 2px solid black;
-  padding: 6px;
-  font-weight: 500;
-  text-decoration: none;
+.c-panel {
+  width: 500px;
 }
 
-.c-panel {
-  display: flex;
-  flex-direction: column;
-  background-color: #FFFFFF;
-  border-radius: 2px;
-  -webkit-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
-  -moz-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
-  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
-  height: 100%;
-}
-.c-panel__img {
-  height: 210px;
-  object-fit: cover;
-}
-.c-panel__body {
-  padding: 10px;
-}
-.c-panel__small-title {
-  color: #292929;
-  font-size: 16px;
-  font-weight: 600;
-}
-.c-panel__title {
-  font-size: 20px;
-  font-weight: 800;
-}
-.c-panel__extra {
-  color: #007CAD;
+.c-text {
+  font-family: "IBM Plex Mono", monospace;
 }
 
 .c-menu {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 12px;
-  padding-left: 192px;
-  padding-right: 192px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-left: 96px;
+  padding-right: 96px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-.c-menu__item--right {
+.c-menu__items--hide {
+  display: none;
+}
+.c-menu__items--visible {
+  display: block;
+}
+.c-menu__items--left {
+  margin-left: auto;
+}
+.c-menu__items--right {
   margin-right: auto;
 }
-.c-menu__item--left {
+.c-menu__hamburger {
   margin-left: auto;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  display: block;
+}
+@media (min-width: 1500px) {
+  .c-menu {
+    gap: 0px;
+  }
+  .c-menu__items {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    gap: 0px;
+  }
+  .c-menu__hamburger {
+    display: none;
+  }
+}
+@media (min-width: 1600px) {
+  .c-menu {
+    gap: 20px;
+  }
+  .c-menu__items {
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    gap: 12px;
+  }
 }
 
 .g--background-color-principal-0 {
@@ -1199,6 +1201,903 @@ table {
   background-color: #FCE8F4;
 }
 
+@media (min-width: 1250px) {
+  .g--background-color-principal-0\@mobil {
+    background-color: #1E3B8A;
+  }
+  .g--background-color-principal-1\@mobil {
+    background-color: #1E3FAE;
+  }
+  .g--background-color-principal-2\@mobil {
+    background-color: #1D4FD7;
+  }
+  .g--background-color-principal-3\@mobil {
+    background-color: #2463EB;
+  }
+  .g--background-color-principal-4\@mobil {
+    background-color: #3C83F6;
+  }
+  .g--background-color-principal-5\@mobil {
+    background-color: #61A6FA;
+  }
+  .g--background-color-principal-6\@mobil {
+    background-color: #91C3FD;
+  }
+  .g--background-color-principal-7\@mobil {
+    background-color: #BEDBFE;
+  }
+  .g--background-color-principal-8\@mobil {
+    background-color: #DCEBFE;
+  }
+  .g--background-color-alternativo-0\@mobil {
+    background-color: #76350F;
+  }
+  .g--background-color-alternativo-1\@mobil {
+    background-color: #91400D;
+  }
+  .g--background-color-alternativo-2\@mobil {
+    background-color: #B35309;
+  }
+  .g--background-color-alternativo-3\@mobil {
+    background-color: #DB7706;
+  }
+  .g--background-color-alternativo-4\@mobil {
+    background-color: #F59F0A;
+  }
+  .g--background-color-alternativo-5\@mobil {
+    background-color: #FBBD23;
+  }
+  .g--background-color-alternativo-6\@mobil {
+    background-color: #FCD44F;
+  }
+  .g--background-color-alternativo-7\@mobil {
+    background-color: #FDE68B;
+  }
+  .g--background-color-alternativo-8\@mobil {
+    background-color: #FEF3C8;
+  }
+  .g--background-color-gris-0\@mobil {
+    background-color: #171717;
+  }
+  .g--background-color-gris-1\@mobil {
+    background-color: #292929;
+  }
+  .g--background-color-gris-2\@mobil {
+    background-color: #454545;
+  }
+  .g--background-color-gris-3\@mobil {
+    background-color: #5E5E5E;
+  }
+  .g--background-color-gris-4\@mobil {
+    background-color: #7A7A7A;
+  }
+  .g--background-color-gris-5\@mobil {
+    background-color: #949494;
+  }
+  .g--background-color-gris-6\@mobil {
+    background-color: #B0B0B0;
+  }
+  .g--background-color-gris-7\@mobil {
+    background-color: #C9C9C9;
+  }
+  .g--background-color-gris-8\@mobil {
+    background-color: #E6E6E6;
+  }
+  .g--background-color-blanco-0\@mobil {
+    background-color: #EBEBEB;
+  }
+  .g--background-color-blanco-1\@mobil {
+    background-color: #EDEDED;
+  }
+  .g--background-color-blanco-2\@mobil {
+    background-color: #F0F0F0;
+  }
+  .g--background-color-blanco-3\@mobil {
+    background-color: #F2F2F2;
+  }
+  .g--background-color-blanco-4\@mobil {
+    background-color: #F5F5F5;
+  }
+  .g--background-color-blanco-5\@mobil {
+    background-color: #F7F7F7;
+  }
+  .g--background-color-blanco-6\@mobil {
+    background-color: #FAFAFA;
+  }
+  .g--background-color-blanco-7\@mobil {
+    background-color: #FCFCFC;
+  }
+  .g--background-color-blanco-8\@mobil {
+    background-color: #FFFFFF;
+  }
+  .g--background-color-rojo-0\@mobil {
+    background-color: #811D1D;
+  }
+  .g--background-color-rojo-1\@mobil {
+    background-color: #981B1B;
+  }
+  .g--background-color-rojo-2\@mobil {
+    background-color: #BA1C1C;
+  }
+  .g--background-color-rojo-3\@mobil {
+    background-color: #DC2828;
+  }
+  .g--background-color-rojo-4\@mobil {
+    background-color: #EF4343;
+  }
+  .g--background-color-rojo-5\@mobil {
+    background-color: #F87272;
+  }
+  .g--background-color-rojo-6\@mobil {
+    background-color: #FCA6A6;
+  }
+  .g--background-color-rojo-7\@mobil {
+    background-color: #FEC8C8;
+  }
+  .g--background-color-rojo-8\@mobil {
+    background-color: #FFFFFF;
+  }
+  .g--background-color-verde-0\@mobil {
+    background-color: #064C39;
+  }
+  .g--background-color-verde-1\@mobil {
+    background-color: #066046;
+  }
+  .g--background-color-verde-2\@mobil {
+    background-color: #047756;
+  }
+  .g--background-color-verde-3\@mobil {
+    background-color: #059467;
+  }
+  .g--background-color-verde-4\@mobil {
+    background-color: #10B77F;
+  }
+  .g--background-color-verde-5\@mobil {
+    background-color: #36D399;
+  }
+  .g--background-color-verde-6\@mobil {
+    background-color: #6EE7B7;
+  }
+  .g--background-color-verde-7\@mobil {
+    background-color: #A5F3CF;
+  }
+  .g--background-color-verde-8\@mobil {
+    background-color: #D1FAE5;
+  }
+  .g--background-color-azul-0\@mobil {
+    background-color: #1E3B8A;
+  }
+  .g--background-color-azul-1\@mobil {
+    background-color: #1E3FAE;
+  }
+  .g--background-color-azul-2\@mobil {
+    background-color: #1D4FD7;
+  }
+  .g--background-color-azul-3\@mobil {
+    background-color: #2463EB;
+  }
+  .g--background-color-azul-4\@mobil {
+    background-color: #3C83F6;
+  }
+  .g--background-color-azul-5\@mobil {
+    background-color: #61A6FA;
+  }
+  .g--background-color-azul-6\@mobil {
+    background-color: #91C3FD;
+  }
+  .g--background-color-azul-7\@mobil {
+    background-color: #BEDBFE;
+  }
+  .g--background-color-azul-8\@mobil {
+    background-color: #DCEBFE;
+  }
+  .g--background-color-turquesa-0\@mobil {
+    background-color: #011619;
+  }
+  .g--background-color-turquesa-1\@mobil {
+    background-color: #01323C;
+  }
+  .g--background-color-turquesa-2\@mobil {
+    background-color: #015165;
+  }
+  .g--background-color-turquesa-3\@mobil {
+    background-color: #00678A;
+  }
+  .g--background-color-turquesa-4\@mobil {
+    background-color: #007CAD;
+  }
+  .g--background-color-turquesa-5\@mobil {
+    background-color: #008BD1;
+  }
+  .g--background-color-turquesa-6\@mobil {
+    background-color: #019EF9;
+  }
+  .g--background-color-turquesa-7\@mobil {
+    background-color: #22A1FC;
+  }
+  .g--background-color-turquesa-8\@mobil {
+    background-color: #47AAFA;
+  }
+  .g--background-color-morado-0\@mobil {
+    background-color: #4c1d95;
+  }
+  .g--background-color-morado-1\@mobil {
+    background-color: #5b21b6;
+  }
+  .g--background-color-morado-2\@mobil {
+    background-color: #6d28d9;
+  }
+  .g--background-color-morado-3\@mobil {
+    background-color: #7c3aed;
+  }
+  .g--background-color-morado-4\@mobil {
+    background-color: #8b5cf6;
+  }
+  .g--background-color-morado-5\@mobil {
+    background-color: #a78bfa;
+  }
+  .g--background-color-morado-6\@mobil {
+    background-color: #c4b5fd;
+  }
+  .g--background-color-morado-7\@mobil {
+    background-color: #ddd6fe;
+  }
+  .g--background-color-morado-8\@mobil {
+    background-color: #ede9fe;
+  }
+  .g--background-color-amarillo-0\@mobil {
+    background-color: #76350F;
+  }
+  .g--background-color-amarillo-1\@mobil {
+    background-color: #91400D;
+  }
+  .g--background-color-amarillo-2\@mobil {
+    background-color: #B35309;
+  }
+  .g--background-color-amarillo-3\@mobil {
+    background-color: #DB7706;
+  }
+  .g--background-color-amarillo-4\@mobil {
+    background-color: #F59F0A;
+  }
+  .g--background-color-amarillo-5\@mobil {
+    background-color: #FBBD23;
+  }
+  .g--background-color-amarillo-6\@mobil {
+    background-color: #FCD44F;
+  }
+  .g--background-color-amarillo-7\@mobil {
+    background-color: #FDE68B;
+  }
+  .g--background-color-amarillo-8\@mobil {
+    background-color: #FEF3C8;
+  }
+  .g--background-color-rosas-0\@mobil {
+    background-color: #811842;
+  }
+  .g--background-color-rosas-1\@mobil {
+    background-color: #9B174C;
+  }
+  .g--background-color-rosas-2\@mobil {
+    background-color: #BF185D;
+  }
+  .g--background-color-rosas-3\@mobil {
+    background-color: #DB2979;
+  }
+  .g--background-color-rosas-4\@mobil {
+    background-color: #EC4699;
+  }
+  .g--background-color-rosas-5\@mobil {
+    background-color: #F471B5;
+  }
+  .g--background-color-rosas-6\@mobil {
+    background-color: #F9A9D5;
+  }
+  .g--background-color-rosas-7\@mobil {
+    background-color: #FBD0E8;
+  }
+  .g--background-color-rosas-8\@mobil {
+    background-color: #FCE8F4;
+  }
+}
+@media (min-width: 1500px) {
+  .g--background-color-principal-0\@tablet {
+    background-color: #1E3B8A;
+  }
+  .g--background-color-principal-1\@tablet {
+    background-color: #1E3FAE;
+  }
+  .g--background-color-principal-2\@tablet {
+    background-color: #1D4FD7;
+  }
+  .g--background-color-principal-3\@tablet {
+    background-color: #2463EB;
+  }
+  .g--background-color-principal-4\@tablet {
+    background-color: #3C83F6;
+  }
+  .g--background-color-principal-5\@tablet {
+    background-color: #61A6FA;
+  }
+  .g--background-color-principal-6\@tablet {
+    background-color: #91C3FD;
+  }
+  .g--background-color-principal-7\@tablet {
+    background-color: #BEDBFE;
+  }
+  .g--background-color-principal-8\@tablet {
+    background-color: #DCEBFE;
+  }
+  .g--background-color-alternativo-0\@tablet {
+    background-color: #76350F;
+  }
+  .g--background-color-alternativo-1\@tablet {
+    background-color: #91400D;
+  }
+  .g--background-color-alternativo-2\@tablet {
+    background-color: #B35309;
+  }
+  .g--background-color-alternativo-3\@tablet {
+    background-color: #DB7706;
+  }
+  .g--background-color-alternativo-4\@tablet {
+    background-color: #F59F0A;
+  }
+  .g--background-color-alternativo-5\@tablet {
+    background-color: #FBBD23;
+  }
+  .g--background-color-alternativo-6\@tablet {
+    background-color: #FCD44F;
+  }
+  .g--background-color-alternativo-7\@tablet {
+    background-color: #FDE68B;
+  }
+  .g--background-color-alternativo-8\@tablet {
+    background-color: #FEF3C8;
+  }
+  .g--background-color-gris-0\@tablet {
+    background-color: #171717;
+  }
+  .g--background-color-gris-1\@tablet {
+    background-color: #292929;
+  }
+  .g--background-color-gris-2\@tablet {
+    background-color: #454545;
+  }
+  .g--background-color-gris-3\@tablet {
+    background-color: #5E5E5E;
+  }
+  .g--background-color-gris-4\@tablet {
+    background-color: #7A7A7A;
+  }
+  .g--background-color-gris-5\@tablet {
+    background-color: #949494;
+  }
+  .g--background-color-gris-6\@tablet {
+    background-color: #B0B0B0;
+  }
+  .g--background-color-gris-7\@tablet {
+    background-color: #C9C9C9;
+  }
+  .g--background-color-gris-8\@tablet {
+    background-color: #E6E6E6;
+  }
+  .g--background-color-blanco-0\@tablet {
+    background-color: #EBEBEB;
+  }
+  .g--background-color-blanco-1\@tablet {
+    background-color: #EDEDED;
+  }
+  .g--background-color-blanco-2\@tablet {
+    background-color: #F0F0F0;
+  }
+  .g--background-color-blanco-3\@tablet {
+    background-color: #F2F2F2;
+  }
+  .g--background-color-blanco-4\@tablet {
+    background-color: #F5F5F5;
+  }
+  .g--background-color-blanco-5\@tablet {
+    background-color: #F7F7F7;
+  }
+  .g--background-color-blanco-6\@tablet {
+    background-color: #FAFAFA;
+  }
+  .g--background-color-blanco-7\@tablet {
+    background-color: #FCFCFC;
+  }
+  .g--background-color-blanco-8\@tablet {
+    background-color: #FFFFFF;
+  }
+  .g--background-color-rojo-0\@tablet {
+    background-color: #811D1D;
+  }
+  .g--background-color-rojo-1\@tablet {
+    background-color: #981B1B;
+  }
+  .g--background-color-rojo-2\@tablet {
+    background-color: #BA1C1C;
+  }
+  .g--background-color-rojo-3\@tablet {
+    background-color: #DC2828;
+  }
+  .g--background-color-rojo-4\@tablet {
+    background-color: #EF4343;
+  }
+  .g--background-color-rojo-5\@tablet {
+    background-color: #F87272;
+  }
+  .g--background-color-rojo-6\@tablet {
+    background-color: #FCA6A6;
+  }
+  .g--background-color-rojo-7\@tablet {
+    background-color: #FEC8C8;
+  }
+  .g--background-color-rojo-8\@tablet {
+    background-color: #FFFFFF;
+  }
+  .g--background-color-verde-0\@tablet {
+    background-color: #064C39;
+  }
+  .g--background-color-verde-1\@tablet {
+    background-color: #066046;
+  }
+  .g--background-color-verde-2\@tablet {
+    background-color: #047756;
+  }
+  .g--background-color-verde-3\@tablet {
+    background-color: #059467;
+  }
+  .g--background-color-verde-4\@tablet {
+    background-color: #10B77F;
+  }
+  .g--background-color-verde-5\@tablet {
+    background-color: #36D399;
+  }
+  .g--background-color-verde-6\@tablet {
+    background-color: #6EE7B7;
+  }
+  .g--background-color-verde-7\@tablet {
+    background-color: #A5F3CF;
+  }
+  .g--background-color-verde-8\@tablet {
+    background-color: #D1FAE5;
+  }
+  .g--background-color-azul-0\@tablet {
+    background-color: #1E3B8A;
+  }
+  .g--background-color-azul-1\@tablet {
+    background-color: #1E3FAE;
+  }
+  .g--background-color-azul-2\@tablet {
+    background-color: #1D4FD7;
+  }
+  .g--background-color-azul-3\@tablet {
+    background-color: #2463EB;
+  }
+  .g--background-color-azul-4\@tablet {
+    background-color: #3C83F6;
+  }
+  .g--background-color-azul-5\@tablet {
+    background-color: #61A6FA;
+  }
+  .g--background-color-azul-6\@tablet {
+    background-color: #91C3FD;
+  }
+  .g--background-color-azul-7\@tablet {
+    background-color: #BEDBFE;
+  }
+  .g--background-color-azul-8\@tablet {
+    background-color: #DCEBFE;
+  }
+  .g--background-color-turquesa-0\@tablet {
+    background-color: #011619;
+  }
+  .g--background-color-turquesa-1\@tablet {
+    background-color: #01323C;
+  }
+  .g--background-color-turquesa-2\@tablet {
+    background-color: #015165;
+  }
+  .g--background-color-turquesa-3\@tablet {
+    background-color: #00678A;
+  }
+  .g--background-color-turquesa-4\@tablet {
+    background-color: #007CAD;
+  }
+  .g--background-color-turquesa-5\@tablet {
+    background-color: #008BD1;
+  }
+  .g--background-color-turquesa-6\@tablet {
+    background-color: #019EF9;
+  }
+  .g--background-color-turquesa-7\@tablet {
+    background-color: #22A1FC;
+  }
+  .g--background-color-turquesa-8\@tablet {
+    background-color: #47AAFA;
+  }
+  .g--background-color-morado-0\@tablet {
+    background-color: #4c1d95;
+  }
+  .g--background-color-morado-1\@tablet {
+    background-color: #5b21b6;
+  }
+  .g--background-color-morado-2\@tablet {
+    background-color: #6d28d9;
+  }
+  .g--background-color-morado-3\@tablet {
+    background-color: #7c3aed;
+  }
+  .g--background-color-morado-4\@tablet {
+    background-color: #8b5cf6;
+  }
+  .g--background-color-morado-5\@tablet {
+    background-color: #a78bfa;
+  }
+  .g--background-color-morado-6\@tablet {
+    background-color: #c4b5fd;
+  }
+  .g--background-color-morado-7\@tablet {
+    background-color: #ddd6fe;
+  }
+  .g--background-color-morado-8\@tablet {
+    background-color: #ede9fe;
+  }
+  .g--background-color-amarillo-0\@tablet {
+    background-color: #76350F;
+  }
+  .g--background-color-amarillo-1\@tablet {
+    background-color: #91400D;
+  }
+  .g--background-color-amarillo-2\@tablet {
+    background-color: #B35309;
+  }
+  .g--background-color-amarillo-3\@tablet {
+    background-color: #DB7706;
+  }
+  .g--background-color-amarillo-4\@tablet {
+    background-color: #F59F0A;
+  }
+  .g--background-color-amarillo-5\@tablet {
+    background-color: #FBBD23;
+  }
+  .g--background-color-amarillo-6\@tablet {
+    background-color: #FCD44F;
+  }
+  .g--background-color-amarillo-7\@tablet {
+    background-color: #FDE68B;
+  }
+  .g--background-color-amarillo-8\@tablet {
+    background-color: #FEF3C8;
+  }
+  .g--background-color-rosas-0\@tablet {
+    background-color: #811842;
+  }
+  .g--background-color-rosas-1\@tablet {
+    background-color: #9B174C;
+  }
+  .g--background-color-rosas-2\@tablet {
+    background-color: #BF185D;
+  }
+  .g--background-color-rosas-3\@tablet {
+    background-color: #DB2979;
+  }
+  .g--background-color-rosas-4\@tablet {
+    background-color: #EC4699;
+  }
+  .g--background-color-rosas-5\@tablet {
+    background-color: #F471B5;
+  }
+  .g--background-color-rosas-6\@tablet {
+    background-color: #F9A9D5;
+  }
+  .g--background-color-rosas-7\@tablet {
+    background-color: #FBD0E8;
+  }
+  .g--background-color-rosas-8\@tablet {
+    background-color: #FCE8F4;
+  }
+}
+@media (min-width: 1600px) {
+  .g--background-color-principal-0\@desktop {
+    background-color: #1E3B8A;
+  }
+  .g--background-color-principal-1\@desktop {
+    background-color: #1E3FAE;
+  }
+  .g--background-color-principal-2\@desktop {
+    background-color: #1D4FD7;
+  }
+  .g--background-color-principal-3\@desktop {
+    background-color: #2463EB;
+  }
+  .g--background-color-principal-4\@desktop {
+    background-color: #3C83F6;
+  }
+  .g--background-color-principal-5\@desktop {
+    background-color: #61A6FA;
+  }
+  .g--background-color-principal-6\@desktop {
+    background-color: #91C3FD;
+  }
+  .g--background-color-principal-7\@desktop {
+    background-color: #BEDBFE;
+  }
+  .g--background-color-principal-8\@desktop {
+    background-color: #DCEBFE;
+  }
+  .g--background-color-alternativo-0\@desktop {
+    background-color: #76350F;
+  }
+  .g--background-color-alternativo-1\@desktop {
+    background-color: #91400D;
+  }
+  .g--background-color-alternativo-2\@desktop {
+    background-color: #B35309;
+  }
+  .g--background-color-alternativo-3\@desktop {
+    background-color: #DB7706;
+  }
+  .g--background-color-alternativo-4\@desktop {
+    background-color: #F59F0A;
+  }
+  .g--background-color-alternativo-5\@desktop {
+    background-color: #FBBD23;
+  }
+  .g--background-color-alternativo-6\@desktop {
+    background-color: #FCD44F;
+  }
+  .g--background-color-alternativo-7\@desktop {
+    background-color: #FDE68B;
+  }
+  .g--background-color-alternativo-8\@desktop {
+    background-color: #FEF3C8;
+  }
+  .g--background-color-gris-0\@desktop {
+    background-color: #171717;
+  }
+  .g--background-color-gris-1\@desktop {
+    background-color: #292929;
+  }
+  .g--background-color-gris-2\@desktop {
+    background-color: #454545;
+  }
+  .g--background-color-gris-3\@desktop {
+    background-color: #5E5E5E;
+  }
+  .g--background-color-gris-4\@desktop {
+    background-color: #7A7A7A;
+  }
+  .g--background-color-gris-5\@desktop {
+    background-color: #949494;
+  }
+  .g--background-color-gris-6\@desktop {
+    background-color: #B0B0B0;
+  }
+  .g--background-color-gris-7\@desktop {
+    background-color: #C9C9C9;
+  }
+  .g--background-color-gris-8\@desktop {
+    background-color: #E6E6E6;
+  }
+  .g--background-color-blanco-0\@desktop {
+    background-color: #EBEBEB;
+  }
+  .g--background-color-blanco-1\@desktop {
+    background-color: #EDEDED;
+  }
+  .g--background-color-blanco-2\@desktop {
+    background-color: #F0F0F0;
+  }
+  .g--background-color-blanco-3\@desktop {
+    background-color: #F2F2F2;
+  }
+  .g--background-color-blanco-4\@desktop {
+    background-color: #F5F5F5;
+  }
+  .g--background-color-blanco-5\@desktop {
+    background-color: #F7F7F7;
+  }
+  .g--background-color-blanco-6\@desktop {
+    background-color: #FAFAFA;
+  }
+  .g--background-color-blanco-7\@desktop {
+    background-color: #FCFCFC;
+  }
+  .g--background-color-blanco-8\@desktop {
+    background-color: #FFFFFF;
+  }
+  .g--background-color-rojo-0\@desktop {
+    background-color: #811D1D;
+  }
+  .g--background-color-rojo-1\@desktop {
+    background-color: #981B1B;
+  }
+  .g--background-color-rojo-2\@desktop {
+    background-color: #BA1C1C;
+  }
+  .g--background-color-rojo-3\@desktop {
+    background-color: #DC2828;
+  }
+  .g--background-color-rojo-4\@desktop {
+    background-color: #EF4343;
+  }
+  .g--background-color-rojo-5\@desktop {
+    background-color: #F87272;
+  }
+  .g--background-color-rojo-6\@desktop {
+    background-color: #FCA6A6;
+  }
+  .g--background-color-rojo-7\@desktop {
+    background-color: #FEC8C8;
+  }
+  .g--background-color-rojo-8\@desktop {
+    background-color: #FFFFFF;
+  }
+  .g--background-color-verde-0\@desktop {
+    background-color: #064C39;
+  }
+  .g--background-color-verde-1\@desktop {
+    background-color: #066046;
+  }
+  .g--background-color-verde-2\@desktop {
+    background-color: #047756;
+  }
+  .g--background-color-verde-3\@desktop {
+    background-color: #059467;
+  }
+  .g--background-color-verde-4\@desktop {
+    background-color: #10B77F;
+  }
+  .g--background-color-verde-5\@desktop {
+    background-color: #36D399;
+  }
+  .g--background-color-verde-6\@desktop {
+    background-color: #6EE7B7;
+  }
+  .g--background-color-verde-7\@desktop {
+    background-color: #A5F3CF;
+  }
+  .g--background-color-verde-8\@desktop {
+    background-color: #D1FAE5;
+  }
+  .g--background-color-azul-0\@desktop {
+    background-color: #1E3B8A;
+  }
+  .g--background-color-azul-1\@desktop {
+    background-color: #1E3FAE;
+  }
+  .g--background-color-azul-2\@desktop {
+    background-color: #1D4FD7;
+  }
+  .g--background-color-azul-3\@desktop {
+    background-color: #2463EB;
+  }
+  .g--background-color-azul-4\@desktop {
+    background-color: #3C83F6;
+  }
+  .g--background-color-azul-5\@desktop {
+    background-color: #61A6FA;
+  }
+  .g--background-color-azul-6\@desktop {
+    background-color: #91C3FD;
+  }
+  .g--background-color-azul-7\@desktop {
+    background-color: #BEDBFE;
+  }
+  .g--background-color-azul-8\@desktop {
+    background-color: #DCEBFE;
+  }
+  .g--background-color-turquesa-0\@desktop {
+    background-color: #011619;
+  }
+  .g--background-color-turquesa-1\@desktop {
+    background-color: #01323C;
+  }
+  .g--background-color-turquesa-2\@desktop {
+    background-color: #015165;
+  }
+  .g--background-color-turquesa-3\@desktop {
+    background-color: #00678A;
+  }
+  .g--background-color-turquesa-4\@desktop {
+    background-color: #007CAD;
+  }
+  .g--background-color-turquesa-5\@desktop {
+    background-color: #008BD1;
+  }
+  .g--background-color-turquesa-6\@desktop {
+    background-color: #019EF9;
+  }
+  .g--background-color-turquesa-7\@desktop {
+    background-color: #22A1FC;
+  }
+  .g--background-color-turquesa-8\@desktop {
+    background-color: #47AAFA;
+  }
+  .g--background-color-morado-0\@desktop {
+    background-color: #4c1d95;
+  }
+  .g--background-color-morado-1\@desktop {
+    background-color: #5b21b6;
+  }
+  .g--background-color-morado-2\@desktop {
+    background-color: #6d28d9;
+  }
+  .g--background-color-morado-3\@desktop {
+    background-color: #7c3aed;
+  }
+  .g--background-color-morado-4\@desktop {
+    background-color: #8b5cf6;
+  }
+  .g--background-color-morado-5\@desktop {
+    background-color: #a78bfa;
+  }
+  .g--background-color-morado-6\@desktop {
+    background-color: #c4b5fd;
+  }
+  .g--background-color-morado-7\@desktop {
+    background-color: #ddd6fe;
+  }
+  .g--background-color-morado-8\@desktop {
+    background-color: #ede9fe;
+  }
+  .g--background-color-amarillo-0\@desktop {
+    background-color: #76350F;
+  }
+  .g--background-color-amarillo-1\@desktop {
+    background-color: #91400D;
+  }
+  .g--background-color-amarillo-2\@desktop {
+    background-color: #B35309;
+  }
+  .g--background-color-amarillo-3\@desktop {
+    background-color: #DB7706;
+  }
+  .g--background-color-amarillo-4\@desktop {
+    background-color: #F59F0A;
+  }
+  .g--background-color-amarillo-5\@desktop {
+    background-color: #FBBD23;
+  }
+  .g--background-color-amarillo-6\@desktop {
+    background-color: #FCD44F;
+  }
+  .g--background-color-amarillo-7\@desktop {
+    background-color: #FDE68B;
+  }
+  .g--background-color-amarillo-8\@desktop {
+    background-color: #FEF3C8;
+  }
+  .g--background-color-rosas-0\@desktop {
+    background-color: #811842;
+  }
+  .g--background-color-rosas-1\@desktop {
+    background-color: #9B174C;
+  }
+  .g--background-color-rosas-2\@desktop {
+    background-color: #BF185D;
+  }
+  .g--background-color-rosas-3\@desktop {
+    background-color: #DB2979;
+  }
+  .g--background-color-rosas-4\@desktop {
+    background-color: #EC4699;
+  }
+  .g--background-color-rosas-5\@desktop {
+    background-color: #F471B5;
+  }
+  .g--background-color-rosas-6\@desktop {
+    background-color: #F9A9D5;
+  }
+  .g--background-color-rosas-7\@desktop {
+    background-color: #FBD0E8;
+  }
+  .g--background-color-rosas-8\@desktop {
+    background-color: #FCE8F4;
+  }
+}
 .g--color-principal-0 {
   color: #1E3B8A;
 }
@@ -1595,6 +2494,903 @@ table {
   color: #FCE8F4;
 }
 
+@media (min-width: 1250px) {
+  .g--color-principal-0\@mobil {
+    color: #1E3B8A;
+  }
+  .g--color-principal-1\@mobil {
+    color: #1E3FAE;
+  }
+  .g--color-principal-2\@mobil {
+    color: #1D4FD7;
+  }
+  .g--color-principal-3\@mobil {
+    color: #2463EB;
+  }
+  .g--color-principal-4\@mobil {
+    color: #3C83F6;
+  }
+  .g--color-principal-5\@mobil {
+    color: #61A6FA;
+  }
+  .g--color-principal-6\@mobil {
+    color: #91C3FD;
+  }
+  .g--color-principal-7\@mobil {
+    color: #BEDBFE;
+  }
+  .g--color-principal-8\@mobil {
+    color: #DCEBFE;
+  }
+  .g--color-alternativo-0\@mobil {
+    color: #76350F;
+  }
+  .g--color-alternativo-1\@mobil {
+    color: #91400D;
+  }
+  .g--color-alternativo-2\@mobil {
+    color: #B35309;
+  }
+  .g--color-alternativo-3\@mobil {
+    color: #DB7706;
+  }
+  .g--color-alternativo-4\@mobil {
+    color: #F59F0A;
+  }
+  .g--color-alternativo-5\@mobil {
+    color: #FBBD23;
+  }
+  .g--color-alternativo-6\@mobil {
+    color: #FCD44F;
+  }
+  .g--color-alternativo-7\@mobil {
+    color: #FDE68B;
+  }
+  .g--color-alternativo-8\@mobil {
+    color: #FEF3C8;
+  }
+  .g--color-gris-0\@mobil {
+    color: #171717;
+  }
+  .g--color-gris-1\@mobil {
+    color: #292929;
+  }
+  .g--color-gris-2\@mobil {
+    color: #454545;
+  }
+  .g--color-gris-3\@mobil {
+    color: #5E5E5E;
+  }
+  .g--color-gris-4\@mobil {
+    color: #7A7A7A;
+  }
+  .g--color-gris-5\@mobil {
+    color: #949494;
+  }
+  .g--color-gris-6\@mobil {
+    color: #B0B0B0;
+  }
+  .g--color-gris-7\@mobil {
+    color: #C9C9C9;
+  }
+  .g--color-gris-8\@mobil {
+    color: #E6E6E6;
+  }
+  .g--color-blanco-0\@mobil {
+    color: #EBEBEB;
+  }
+  .g--color-blanco-1\@mobil {
+    color: #EDEDED;
+  }
+  .g--color-blanco-2\@mobil {
+    color: #F0F0F0;
+  }
+  .g--color-blanco-3\@mobil {
+    color: #F2F2F2;
+  }
+  .g--color-blanco-4\@mobil {
+    color: #F5F5F5;
+  }
+  .g--color-blanco-5\@mobil {
+    color: #F7F7F7;
+  }
+  .g--color-blanco-6\@mobil {
+    color: #FAFAFA;
+  }
+  .g--color-blanco-7\@mobil {
+    color: #FCFCFC;
+  }
+  .g--color-blanco-8\@mobil {
+    color: #FFFFFF;
+  }
+  .g--color-rojo-0\@mobil {
+    color: #811D1D;
+  }
+  .g--color-rojo-1\@mobil {
+    color: #981B1B;
+  }
+  .g--color-rojo-2\@mobil {
+    color: #BA1C1C;
+  }
+  .g--color-rojo-3\@mobil {
+    color: #DC2828;
+  }
+  .g--color-rojo-4\@mobil {
+    color: #EF4343;
+  }
+  .g--color-rojo-5\@mobil {
+    color: #F87272;
+  }
+  .g--color-rojo-6\@mobil {
+    color: #FCA6A6;
+  }
+  .g--color-rojo-7\@mobil {
+    color: #FEC8C8;
+  }
+  .g--color-rojo-8\@mobil {
+    color: #FFFFFF;
+  }
+  .g--color-verde-0\@mobil {
+    color: #064C39;
+  }
+  .g--color-verde-1\@mobil {
+    color: #066046;
+  }
+  .g--color-verde-2\@mobil {
+    color: #047756;
+  }
+  .g--color-verde-3\@mobil {
+    color: #059467;
+  }
+  .g--color-verde-4\@mobil {
+    color: #10B77F;
+  }
+  .g--color-verde-5\@mobil {
+    color: #36D399;
+  }
+  .g--color-verde-6\@mobil {
+    color: #6EE7B7;
+  }
+  .g--color-verde-7\@mobil {
+    color: #A5F3CF;
+  }
+  .g--color-verde-8\@mobil {
+    color: #D1FAE5;
+  }
+  .g--color-azul-0\@mobil {
+    color: #1E3B8A;
+  }
+  .g--color-azul-1\@mobil {
+    color: #1E3FAE;
+  }
+  .g--color-azul-2\@mobil {
+    color: #1D4FD7;
+  }
+  .g--color-azul-3\@mobil {
+    color: #2463EB;
+  }
+  .g--color-azul-4\@mobil {
+    color: #3C83F6;
+  }
+  .g--color-azul-5\@mobil {
+    color: #61A6FA;
+  }
+  .g--color-azul-6\@mobil {
+    color: #91C3FD;
+  }
+  .g--color-azul-7\@mobil {
+    color: #BEDBFE;
+  }
+  .g--color-azul-8\@mobil {
+    color: #DCEBFE;
+  }
+  .g--color-turquesa-0\@mobil {
+    color: #011619;
+  }
+  .g--color-turquesa-1\@mobil {
+    color: #01323C;
+  }
+  .g--color-turquesa-2\@mobil {
+    color: #015165;
+  }
+  .g--color-turquesa-3\@mobil {
+    color: #00678A;
+  }
+  .g--color-turquesa-4\@mobil {
+    color: #007CAD;
+  }
+  .g--color-turquesa-5\@mobil {
+    color: #008BD1;
+  }
+  .g--color-turquesa-6\@mobil {
+    color: #019EF9;
+  }
+  .g--color-turquesa-7\@mobil {
+    color: #22A1FC;
+  }
+  .g--color-turquesa-8\@mobil {
+    color: #47AAFA;
+  }
+  .g--color-morado-0\@mobil {
+    color: #4c1d95;
+  }
+  .g--color-morado-1\@mobil {
+    color: #5b21b6;
+  }
+  .g--color-morado-2\@mobil {
+    color: #6d28d9;
+  }
+  .g--color-morado-3\@mobil {
+    color: #7c3aed;
+  }
+  .g--color-morado-4\@mobil {
+    color: #8b5cf6;
+  }
+  .g--color-morado-5\@mobil {
+    color: #a78bfa;
+  }
+  .g--color-morado-6\@mobil {
+    color: #c4b5fd;
+  }
+  .g--color-morado-7\@mobil {
+    color: #ddd6fe;
+  }
+  .g--color-morado-8\@mobil {
+    color: #ede9fe;
+  }
+  .g--color-amarillo-0\@mobil {
+    color: #76350F;
+  }
+  .g--color-amarillo-1\@mobil {
+    color: #91400D;
+  }
+  .g--color-amarillo-2\@mobil {
+    color: #B35309;
+  }
+  .g--color-amarillo-3\@mobil {
+    color: #DB7706;
+  }
+  .g--color-amarillo-4\@mobil {
+    color: #F59F0A;
+  }
+  .g--color-amarillo-5\@mobil {
+    color: #FBBD23;
+  }
+  .g--color-amarillo-6\@mobil {
+    color: #FCD44F;
+  }
+  .g--color-amarillo-7\@mobil {
+    color: #FDE68B;
+  }
+  .g--color-amarillo-8\@mobil {
+    color: #FEF3C8;
+  }
+  .g--color-rosas-0\@mobil {
+    color: #811842;
+  }
+  .g--color-rosas-1\@mobil {
+    color: #9B174C;
+  }
+  .g--color-rosas-2\@mobil {
+    color: #BF185D;
+  }
+  .g--color-rosas-3\@mobil {
+    color: #DB2979;
+  }
+  .g--color-rosas-4\@mobil {
+    color: #EC4699;
+  }
+  .g--color-rosas-5\@mobil {
+    color: #F471B5;
+  }
+  .g--color-rosas-6\@mobil {
+    color: #F9A9D5;
+  }
+  .g--color-rosas-7\@mobil {
+    color: #FBD0E8;
+  }
+  .g--color-rosas-8\@mobil {
+    color: #FCE8F4;
+  }
+}
+@media (min-width: 1500px) {
+  .g--color-principal-0\@tablet {
+    color: #1E3B8A;
+  }
+  .g--color-principal-1\@tablet {
+    color: #1E3FAE;
+  }
+  .g--color-principal-2\@tablet {
+    color: #1D4FD7;
+  }
+  .g--color-principal-3\@tablet {
+    color: #2463EB;
+  }
+  .g--color-principal-4\@tablet {
+    color: #3C83F6;
+  }
+  .g--color-principal-5\@tablet {
+    color: #61A6FA;
+  }
+  .g--color-principal-6\@tablet {
+    color: #91C3FD;
+  }
+  .g--color-principal-7\@tablet {
+    color: #BEDBFE;
+  }
+  .g--color-principal-8\@tablet {
+    color: #DCEBFE;
+  }
+  .g--color-alternativo-0\@tablet {
+    color: #76350F;
+  }
+  .g--color-alternativo-1\@tablet {
+    color: #91400D;
+  }
+  .g--color-alternativo-2\@tablet {
+    color: #B35309;
+  }
+  .g--color-alternativo-3\@tablet {
+    color: #DB7706;
+  }
+  .g--color-alternativo-4\@tablet {
+    color: #F59F0A;
+  }
+  .g--color-alternativo-5\@tablet {
+    color: #FBBD23;
+  }
+  .g--color-alternativo-6\@tablet {
+    color: #FCD44F;
+  }
+  .g--color-alternativo-7\@tablet {
+    color: #FDE68B;
+  }
+  .g--color-alternativo-8\@tablet {
+    color: #FEF3C8;
+  }
+  .g--color-gris-0\@tablet {
+    color: #171717;
+  }
+  .g--color-gris-1\@tablet {
+    color: #292929;
+  }
+  .g--color-gris-2\@tablet {
+    color: #454545;
+  }
+  .g--color-gris-3\@tablet {
+    color: #5E5E5E;
+  }
+  .g--color-gris-4\@tablet {
+    color: #7A7A7A;
+  }
+  .g--color-gris-5\@tablet {
+    color: #949494;
+  }
+  .g--color-gris-6\@tablet {
+    color: #B0B0B0;
+  }
+  .g--color-gris-7\@tablet {
+    color: #C9C9C9;
+  }
+  .g--color-gris-8\@tablet {
+    color: #E6E6E6;
+  }
+  .g--color-blanco-0\@tablet {
+    color: #EBEBEB;
+  }
+  .g--color-blanco-1\@tablet {
+    color: #EDEDED;
+  }
+  .g--color-blanco-2\@tablet {
+    color: #F0F0F0;
+  }
+  .g--color-blanco-3\@tablet {
+    color: #F2F2F2;
+  }
+  .g--color-blanco-4\@tablet {
+    color: #F5F5F5;
+  }
+  .g--color-blanco-5\@tablet {
+    color: #F7F7F7;
+  }
+  .g--color-blanco-6\@tablet {
+    color: #FAFAFA;
+  }
+  .g--color-blanco-7\@tablet {
+    color: #FCFCFC;
+  }
+  .g--color-blanco-8\@tablet {
+    color: #FFFFFF;
+  }
+  .g--color-rojo-0\@tablet {
+    color: #811D1D;
+  }
+  .g--color-rojo-1\@tablet {
+    color: #981B1B;
+  }
+  .g--color-rojo-2\@tablet {
+    color: #BA1C1C;
+  }
+  .g--color-rojo-3\@tablet {
+    color: #DC2828;
+  }
+  .g--color-rojo-4\@tablet {
+    color: #EF4343;
+  }
+  .g--color-rojo-5\@tablet {
+    color: #F87272;
+  }
+  .g--color-rojo-6\@tablet {
+    color: #FCA6A6;
+  }
+  .g--color-rojo-7\@tablet {
+    color: #FEC8C8;
+  }
+  .g--color-rojo-8\@tablet {
+    color: #FFFFFF;
+  }
+  .g--color-verde-0\@tablet {
+    color: #064C39;
+  }
+  .g--color-verde-1\@tablet {
+    color: #066046;
+  }
+  .g--color-verde-2\@tablet {
+    color: #047756;
+  }
+  .g--color-verde-3\@tablet {
+    color: #059467;
+  }
+  .g--color-verde-4\@tablet {
+    color: #10B77F;
+  }
+  .g--color-verde-5\@tablet {
+    color: #36D399;
+  }
+  .g--color-verde-6\@tablet {
+    color: #6EE7B7;
+  }
+  .g--color-verde-7\@tablet {
+    color: #A5F3CF;
+  }
+  .g--color-verde-8\@tablet {
+    color: #D1FAE5;
+  }
+  .g--color-azul-0\@tablet {
+    color: #1E3B8A;
+  }
+  .g--color-azul-1\@tablet {
+    color: #1E3FAE;
+  }
+  .g--color-azul-2\@tablet {
+    color: #1D4FD7;
+  }
+  .g--color-azul-3\@tablet {
+    color: #2463EB;
+  }
+  .g--color-azul-4\@tablet {
+    color: #3C83F6;
+  }
+  .g--color-azul-5\@tablet {
+    color: #61A6FA;
+  }
+  .g--color-azul-6\@tablet {
+    color: #91C3FD;
+  }
+  .g--color-azul-7\@tablet {
+    color: #BEDBFE;
+  }
+  .g--color-azul-8\@tablet {
+    color: #DCEBFE;
+  }
+  .g--color-turquesa-0\@tablet {
+    color: #011619;
+  }
+  .g--color-turquesa-1\@tablet {
+    color: #01323C;
+  }
+  .g--color-turquesa-2\@tablet {
+    color: #015165;
+  }
+  .g--color-turquesa-3\@tablet {
+    color: #00678A;
+  }
+  .g--color-turquesa-4\@tablet {
+    color: #007CAD;
+  }
+  .g--color-turquesa-5\@tablet {
+    color: #008BD1;
+  }
+  .g--color-turquesa-6\@tablet {
+    color: #019EF9;
+  }
+  .g--color-turquesa-7\@tablet {
+    color: #22A1FC;
+  }
+  .g--color-turquesa-8\@tablet {
+    color: #47AAFA;
+  }
+  .g--color-morado-0\@tablet {
+    color: #4c1d95;
+  }
+  .g--color-morado-1\@tablet {
+    color: #5b21b6;
+  }
+  .g--color-morado-2\@tablet {
+    color: #6d28d9;
+  }
+  .g--color-morado-3\@tablet {
+    color: #7c3aed;
+  }
+  .g--color-morado-4\@tablet {
+    color: #8b5cf6;
+  }
+  .g--color-morado-5\@tablet {
+    color: #a78bfa;
+  }
+  .g--color-morado-6\@tablet {
+    color: #c4b5fd;
+  }
+  .g--color-morado-7\@tablet {
+    color: #ddd6fe;
+  }
+  .g--color-morado-8\@tablet {
+    color: #ede9fe;
+  }
+  .g--color-amarillo-0\@tablet {
+    color: #76350F;
+  }
+  .g--color-amarillo-1\@tablet {
+    color: #91400D;
+  }
+  .g--color-amarillo-2\@tablet {
+    color: #B35309;
+  }
+  .g--color-amarillo-3\@tablet {
+    color: #DB7706;
+  }
+  .g--color-amarillo-4\@tablet {
+    color: #F59F0A;
+  }
+  .g--color-amarillo-5\@tablet {
+    color: #FBBD23;
+  }
+  .g--color-amarillo-6\@tablet {
+    color: #FCD44F;
+  }
+  .g--color-amarillo-7\@tablet {
+    color: #FDE68B;
+  }
+  .g--color-amarillo-8\@tablet {
+    color: #FEF3C8;
+  }
+  .g--color-rosas-0\@tablet {
+    color: #811842;
+  }
+  .g--color-rosas-1\@tablet {
+    color: #9B174C;
+  }
+  .g--color-rosas-2\@tablet {
+    color: #BF185D;
+  }
+  .g--color-rosas-3\@tablet {
+    color: #DB2979;
+  }
+  .g--color-rosas-4\@tablet {
+    color: #EC4699;
+  }
+  .g--color-rosas-5\@tablet {
+    color: #F471B5;
+  }
+  .g--color-rosas-6\@tablet {
+    color: #F9A9D5;
+  }
+  .g--color-rosas-7\@tablet {
+    color: #FBD0E8;
+  }
+  .g--color-rosas-8\@tablet {
+    color: #FCE8F4;
+  }
+}
+@media (min-width: 1600px) {
+  .g--color-principal-0\@desktop {
+    color: #1E3B8A;
+  }
+  .g--color-principal-1\@desktop {
+    color: #1E3FAE;
+  }
+  .g--color-principal-2\@desktop {
+    color: #1D4FD7;
+  }
+  .g--color-principal-3\@desktop {
+    color: #2463EB;
+  }
+  .g--color-principal-4\@desktop {
+    color: #3C83F6;
+  }
+  .g--color-principal-5\@desktop {
+    color: #61A6FA;
+  }
+  .g--color-principal-6\@desktop {
+    color: #91C3FD;
+  }
+  .g--color-principal-7\@desktop {
+    color: #BEDBFE;
+  }
+  .g--color-principal-8\@desktop {
+    color: #DCEBFE;
+  }
+  .g--color-alternativo-0\@desktop {
+    color: #76350F;
+  }
+  .g--color-alternativo-1\@desktop {
+    color: #91400D;
+  }
+  .g--color-alternativo-2\@desktop {
+    color: #B35309;
+  }
+  .g--color-alternativo-3\@desktop {
+    color: #DB7706;
+  }
+  .g--color-alternativo-4\@desktop {
+    color: #F59F0A;
+  }
+  .g--color-alternativo-5\@desktop {
+    color: #FBBD23;
+  }
+  .g--color-alternativo-6\@desktop {
+    color: #FCD44F;
+  }
+  .g--color-alternativo-7\@desktop {
+    color: #FDE68B;
+  }
+  .g--color-alternativo-8\@desktop {
+    color: #FEF3C8;
+  }
+  .g--color-gris-0\@desktop {
+    color: #171717;
+  }
+  .g--color-gris-1\@desktop {
+    color: #292929;
+  }
+  .g--color-gris-2\@desktop {
+    color: #454545;
+  }
+  .g--color-gris-3\@desktop {
+    color: #5E5E5E;
+  }
+  .g--color-gris-4\@desktop {
+    color: #7A7A7A;
+  }
+  .g--color-gris-5\@desktop {
+    color: #949494;
+  }
+  .g--color-gris-6\@desktop {
+    color: #B0B0B0;
+  }
+  .g--color-gris-7\@desktop {
+    color: #C9C9C9;
+  }
+  .g--color-gris-8\@desktop {
+    color: #E6E6E6;
+  }
+  .g--color-blanco-0\@desktop {
+    color: #EBEBEB;
+  }
+  .g--color-blanco-1\@desktop {
+    color: #EDEDED;
+  }
+  .g--color-blanco-2\@desktop {
+    color: #F0F0F0;
+  }
+  .g--color-blanco-3\@desktop {
+    color: #F2F2F2;
+  }
+  .g--color-blanco-4\@desktop {
+    color: #F5F5F5;
+  }
+  .g--color-blanco-5\@desktop {
+    color: #F7F7F7;
+  }
+  .g--color-blanco-6\@desktop {
+    color: #FAFAFA;
+  }
+  .g--color-blanco-7\@desktop {
+    color: #FCFCFC;
+  }
+  .g--color-blanco-8\@desktop {
+    color: #FFFFFF;
+  }
+  .g--color-rojo-0\@desktop {
+    color: #811D1D;
+  }
+  .g--color-rojo-1\@desktop {
+    color: #981B1B;
+  }
+  .g--color-rojo-2\@desktop {
+    color: #BA1C1C;
+  }
+  .g--color-rojo-3\@desktop {
+    color: #DC2828;
+  }
+  .g--color-rojo-4\@desktop {
+    color: #EF4343;
+  }
+  .g--color-rojo-5\@desktop {
+    color: #F87272;
+  }
+  .g--color-rojo-6\@desktop {
+    color: #FCA6A6;
+  }
+  .g--color-rojo-7\@desktop {
+    color: #FEC8C8;
+  }
+  .g--color-rojo-8\@desktop {
+    color: #FFFFFF;
+  }
+  .g--color-verde-0\@desktop {
+    color: #064C39;
+  }
+  .g--color-verde-1\@desktop {
+    color: #066046;
+  }
+  .g--color-verde-2\@desktop {
+    color: #047756;
+  }
+  .g--color-verde-3\@desktop {
+    color: #059467;
+  }
+  .g--color-verde-4\@desktop {
+    color: #10B77F;
+  }
+  .g--color-verde-5\@desktop {
+    color: #36D399;
+  }
+  .g--color-verde-6\@desktop {
+    color: #6EE7B7;
+  }
+  .g--color-verde-7\@desktop {
+    color: #A5F3CF;
+  }
+  .g--color-verde-8\@desktop {
+    color: #D1FAE5;
+  }
+  .g--color-azul-0\@desktop {
+    color: #1E3B8A;
+  }
+  .g--color-azul-1\@desktop {
+    color: #1E3FAE;
+  }
+  .g--color-azul-2\@desktop {
+    color: #1D4FD7;
+  }
+  .g--color-azul-3\@desktop {
+    color: #2463EB;
+  }
+  .g--color-azul-4\@desktop {
+    color: #3C83F6;
+  }
+  .g--color-azul-5\@desktop {
+    color: #61A6FA;
+  }
+  .g--color-azul-6\@desktop {
+    color: #91C3FD;
+  }
+  .g--color-azul-7\@desktop {
+    color: #BEDBFE;
+  }
+  .g--color-azul-8\@desktop {
+    color: #DCEBFE;
+  }
+  .g--color-turquesa-0\@desktop {
+    color: #011619;
+  }
+  .g--color-turquesa-1\@desktop {
+    color: #01323C;
+  }
+  .g--color-turquesa-2\@desktop {
+    color: #015165;
+  }
+  .g--color-turquesa-3\@desktop {
+    color: #00678A;
+  }
+  .g--color-turquesa-4\@desktop {
+    color: #007CAD;
+  }
+  .g--color-turquesa-5\@desktop {
+    color: #008BD1;
+  }
+  .g--color-turquesa-6\@desktop {
+    color: #019EF9;
+  }
+  .g--color-turquesa-7\@desktop {
+    color: #22A1FC;
+  }
+  .g--color-turquesa-8\@desktop {
+    color: #47AAFA;
+  }
+  .g--color-morado-0\@desktop {
+    color: #4c1d95;
+  }
+  .g--color-morado-1\@desktop {
+    color: #5b21b6;
+  }
+  .g--color-morado-2\@desktop {
+    color: #6d28d9;
+  }
+  .g--color-morado-3\@desktop {
+    color: #7c3aed;
+  }
+  .g--color-morado-4\@desktop {
+    color: #8b5cf6;
+  }
+  .g--color-morado-5\@desktop {
+    color: #a78bfa;
+  }
+  .g--color-morado-6\@desktop {
+    color: #c4b5fd;
+  }
+  .g--color-morado-7\@desktop {
+    color: #ddd6fe;
+  }
+  .g--color-morado-8\@desktop {
+    color: #ede9fe;
+  }
+  .g--color-amarillo-0\@desktop {
+    color: #76350F;
+  }
+  .g--color-amarillo-1\@desktop {
+    color: #91400D;
+  }
+  .g--color-amarillo-2\@desktop {
+    color: #B35309;
+  }
+  .g--color-amarillo-3\@desktop {
+    color: #DB7706;
+  }
+  .g--color-amarillo-4\@desktop {
+    color: #F59F0A;
+  }
+  .g--color-amarillo-5\@desktop {
+    color: #FBBD23;
+  }
+  .g--color-amarillo-6\@desktop {
+    color: #FCD44F;
+  }
+  .g--color-amarillo-7\@desktop {
+    color: #FDE68B;
+  }
+  .g--color-amarillo-8\@desktop {
+    color: #FEF3C8;
+  }
+  .g--color-rosas-0\@desktop {
+    color: #811842;
+  }
+  .g--color-rosas-1\@desktop {
+    color: #9B174C;
+  }
+  .g--color-rosas-2\@desktop {
+    color: #BF185D;
+  }
+  .g--color-rosas-3\@desktop {
+    color: #DB2979;
+  }
+  .g--color-rosas-4\@desktop {
+    color: #EC4699;
+  }
+  .g--color-rosas-5\@desktop {
+    color: #F471B5;
+  }
+  .g--color-rosas-6\@desktop {
+    color: #F9A9D5;
+  }
+  .g--color-rosas-7\@desktop {
+    color: #FBD0E8;
+  }
+  .g--color-rosas-8\@desktop {
+    color: #FCE8F4;
+  }
+}
 .g--border-color-principal-0 {
   border-color: #1E3B8A;
 }
@@ -1991,6 +3787,903 @@ table {
   border-color: #FCE8F4;
 }
 
+@media (min-width: 1250px) {
+  .g--border-color-principal-0\@mobil {
+    border-color: #1E3B8A;
+  }
+  .g--border-color-principal-1\@mobil {
+    border-color: #1E3FAE;
+  }
+  .g--border-color-principal-2\@mobil {
+    border-color: #1D4FD7;
+  }
+  .g--border-color-principal-3\@mobil {
+    border-color: #2463EB;
+  }
+  .g--border-color-principal-4\@mobil {
+    border-color: #3C83F6;
+  }
+  .g--border-color-principal-5\@mobil {
+    border-color: #61A6FA;
+  }
+  .g--border-color-principal-6\@mobil {
+    border-color: #91C3FD;
+  }
+  .g--border-color-principal-7\@mobil {
+    border-color: #BEDBFE;
+  }
+  .g--border-color-principal-8\@mobil {
+    border-color: #DCEBFE;
+  }
+  .g--border-color-alternativo-0\@mobil {
+    border-color: #76350F;
+  }
+  .g--border-color-alternativo-1\@mobil {
+    border-color: #91400D;
+  }
+  .g--border-color-alternativo-2\@mobil {
+    border-color: #B35309;
+  }
+  .g--border-color-alternativo-3\@mobil {
+    border-color: #DB7706;
+  }
+  .g--border-color-alternativo-4\@mobil {
+    border-color: #F59F0A;
+  }
+  .g--border-color-alternativo-5\@mobil {
+    border-color: #FBBD23;
+  }
+  .g--border-color-alternativo-6\@mobil {
+    border-color: #FCD44F;
+  }
+  .g--border-color-alternativo-7\@mobil {
+    border-color: #FDE68B;
+  }
+  .g--border-color-alternativo-8\@mobil {
+    border-color: #FEF3C8;
+  }
+  .g--border-color-gris-0\@mobil {
+    border-color: #171717;
+  }
+  .g--border-color-gris-1\@mobil {
+    border-color: #292929;
+  }
+  .g--border-color-gris-2\@mobil {
+    border-color: #454545;
+  }
+  .g--border-color-gris-3\@mobil {
+    border-color: #5E5E5E;
+  }
+  .g--border-color-gris-4\@mobil {
+    border-color: #7A7A7A;
+  }
+  .g--border-color-gris-5\@mobil {
+    border-color: #949494;
+  }
+  .g--border-color-gris-6\@mobil {
+    border-color: #B0B0B0;
+  }
+  .g--border-color-gris-7\@mobil {
+    border-color: #C9C9C9;
+  }
+  .g--border-color-gris-8\@mobil {
+    border-color: #E6E6E6;
+  }
+  .g--border-color-blanco-0\@mobil {
+    border-color: #EBEBEB;
+  }
+  .g--border-color-blanco-1\@mobil {
+    border-color: #EDEDED;
+  }
+  .g--border-color-blanco-2\@mobil {
+    border-color: #F0F0F0;
+  }
+  .g--border-color-blanco-3\@mobil {
+    border-color: #F2F2F2;
+  }
+  .g--border-color-blanco-4\@mobil {
+    border-color: #F5F5F5;
+  }
+  .g--border-color-blanco-5\@mobil {
+    border-color: #F7F7F7;
+  }
+  .g--border-color-blanco-6\@mobil {
+    border-color: #FAFAFA;
+  }
+  .g--border-color-blanco-7\@mobil {
+    border-color: #FCFCFC;
+  }
+  .g--border-color-blanco-8\@mobil {
+    border-color: #FFFFFF;
+  }
+  .g--border-color-rojo-0\@mobil {
+    border-color: #811D1D;
+  }
+  .g--border-color-rojo-1\@mobil {
+    border-color: #981B1B;
+  }
+  .g--border-color-rojo-2\@mobil {
+    border-color: #BA1C1C;
+  }
+  .g--border-color-rojo-3\@mobil {
+    border-color: #DC2828;
+  }
+  .g--border-color-rojo-4\@mobil {
+    border-color: #EF4343;
+  }
+  .g--border-color-rojo-5\@mobil {
+    border-color: #F87272;
+  }
+  .g--border-color-rojo-6\@mobil {
+    border-color: #FCA6A6;
+  }
+  .g--border-color-rojo-7\@mobil {
+    border-color: #FEC8C8;
+  }
+  .g--border-color-rojo-8\@mobil {
+    border-color: #FFFFFF;
+  }
+  .g--border-color-verde-0\@mobil {
+    border-color: #064C39;
+  }
+  .g--border-color-verde-1\@mobil {
+    border-color: #066046;
+  }
+  .g--border-color-verde-2\@mobil {
+    border-color: #047756;
+  }
+  .g--border-color-verde-3\@mobil {
+    border-color: #059467;
+  }
+  .g--border-color-verde-4\@mobil {
+    border-color: #10B77F;
+  }
+  .g--border-color-verde-5\@mobil {
+    border-color: #36D399;
+  }
+  .g--border-color-verde-6\@mobil {
+    border-color: #6EE7B7;
+  }
+  .g--border-color-verde-7\@mobil {
+    border-color: #A5F3CF;
+  }
+  .g--border-color-verde-8\@mobil {
+    border-color: #D1FAE5;
+  }
+  .g--border-color-azul-0\@mobil {
+    border-color: #1E3B8A;
+  }
+  .g--border-color-azul-1\@mobil {
+    border-color: #1E3FAE;
+  }
+  .g--border-color-azul-2\@mobil {
+    border-color: #1D4FD7;
+  }
+  .g--border-color-azul-3\@mobil {
+    border-color: #2463EB;
+  }
+  .g--border-color-azul-4\@mobil {
+    border-color: #3C83F6;
+  }
+  .g--border-color-azul-5\@mobil {
+    border-color: #61A6FA;
+  }
+  .g--border-color-azul-6\@mobil {
+    border-color: #91C3FD;
+  }
+  .g--border-color-azul-7\@mobil {
+    border-color: #BEDBFE;
+  }
+  .g--border-color-azul-8\@mobil {
+    border-color: #DCEBFE;
+  }
+  .g--border-color-turquesa-0\@mobil {
+    border-color: #011619;
+  }
+  .g--border-color-turquesa-1\@mobil {
+    border-color: #01323C;
+  }
+  .g--border-color-turquesa-2\@mobil {
+    border-color: #015165;
+  }
+  .g--border-color-turquesa-3\@mobil {
+    border-color: #00678A;
+  }
+  .g--border-color-turquesa-4\@mobil {
+    border-color: #007CAD;
+  }
+  .g--border-color-turquesa-5\@mobil {
+    border-color: #008BD1;
+  }
+  .g--border-color-turquesa-6\@mobil {
+    border-color: #019EF9;
+  }
+  .g--border-color-turquesa-7\@mobil {
+    border-color: #22A1FC;
+  }
+  .g--border-color-turquesa-8\@mobil {
+    border-color: #47AAFA;
+  }
+  .g--border-color-morado-0\@mobil {
+    border-color: #4c1d95;
+  }
+  .g--border-color-morado-1\@mobil {
+    border-color: #5b21b6;
+  }
+  .g--border-color-morado-2\@mobil {
+    border-color: #6d28d9;
+  }
+  .g--border-color-morado-3\@mobil {
+    border-color: #7c3aed;
+  }
+  .g--border-color-morado-4\@mobil {
+    border-color: #8b5cf6;
+  }
+  .g--border-color-morado-5\@mobil {
+    border-color: #a78bfa;
+  }
+  .g--border-color-morado-6\@mobil {
+    border-color: #c4b5fd;
+  }
+  .g--border-color-morado-7\@mobil {
+    border-color: #ddd6fe;
+  }
+  .g--border-color-morado-8\@mobil {
+    border-color: #ede9fe;
+  }
+  .g--border-color-amarillo-0\@mobil {
+    border-color: #76350F;
+  }
+  .g--border-color-amarillo-1\@mobil {
+    border-color: #91400D;
+  }
+  .g--border-color-amarillo-2\@mobil {
+    border-color: #B35309;
+  }
+  .g--border-color-amarillo-3\@mobil {
+    border-color: #DB7706;
+  }
+  .g--border-color-amarillo-4\@mobil {
+    border-color: #F59F0A;
+  }
+  .g--border-color-amarillo-5\@mobil {
+    border-color: #FBBD23;
+  }
+  .g--border-color-amarillo-6\@mobil {
+    border-color: #FCD44F;
+  }
+  .g--border-color-amarillo-7\@mobil {
+    border-color: #FDE68B;
+  }
+  .g--border-color-amarillo-8\@mobil {
+    border-color: #FEF3C8;
+  }
+  .g--border-color-rosas-0\@mobil {
+    border-color: #811842;
+  }
+  .g--border-color-rosas-1\@mobil {
+    border-color: #9B174C;
+  }
+  .g--border-color-rosas-2\@mobil {
+    border-color: #BF185D;
+  }
+  .g--border-color-rosas-3\@mobil {
+    border-color: #DB2979;
+  }
+  .g--border-color-rosas-4\@mobil {
+    border-color: #EC4699;
+  }
+  .g--border-color-rosas-5\@mobil {
+    border-color: #F471B5;
+  }
+  .g--border-color-rosas-6\@mobil {
+    border-color: #F9A9D5;
+  }
+  .g--border-color-rosas-7\@mobil {
+    border-color: #FBD0E8;
+  }
+  .g--border-color-rosas-8\@mobil {
+    border-color: #FCE8F4;
+  }
+}
+@media (min-width: 1500px) {
+  .g--border-color-principal-0\@tablet {
+    border-color: #1E3B8A;
+  }
+  .g--border-color-principal-1\@tablet {
+    border-color: #1E3FAE;
+  }
+  .g--border-color-principal-2\@tablet {
+    border-color: #1D4FD7;
+  }
+  .g--border-color-principal-3\@tablet {
+    border-color: #2463EB;
+  }
+  .g--border-color-principal-4\@tablet {
+    border-color: #3C83F6;
+  }
+  .g--border-color-principal-5\@tablet {
+    border-color: #61A6FA;
+  }
+  .g--border-color-principal-6\@tablet {
+    border-color: #91C3FD;
+  }
+  .g--border-color-principal-7\@tablet {
+    border-color: #BEDBFE;
+  }
+  .g--border-color-principal-8\@tablet {
+    border-color: #DCEBFE;
+  }
+  .g--border-color-alternativo-0\@tablet {
+    border-color: #76350F;
+  }
+  .g--border-color-alternativo-1\@tablet {
+    border-color: #91400D;
+  }
+  .g--border-color-alternativo-2\@tablet {
+    border-color: #B35309;
+  }
+  .g--border-color-alternativo-3\@tablet {
+    border-color: #DB7706;
+  }
+  .g--border-color-alternativo-4\@tablet {
+    border-color: #F59F0A;
+  }
+  .g--border-color-alternativo-5\@tablet {
+    border-color: #FBBD23;
+  }
+  .g--border-color-alternativo-6\@tablet {
+    border-color: #FCD44F;
+  }
+  .g--border-color-alternativo-7\@tablet {
+    border-color: #FDE68B;
+  }
+  .g--border-color-alternativo-8\@tablet {
+    border-color: #FEF3C8;
+  }
+  .g--border-color-gris-0\@tablet {
+    border-color: #171717;
+  }
+  .g--border-color-gris-1\@tablet {
+    border-color: #292929;
+  }
+  .g--border-color-gris-2\@tablet {
+    border-color: #454545;
+  }
+  .g--border-color-gris-3\@tablet {
+    border-color: #5E5E5E;
+  }
+  .g--border-color-gris-4\@tablet {
+    border-color: #7A7A7A;
+  }
+  .g--border-color-gris-5\@tablet {
+    border-color: #949494;
+  }
+  .g--border-color-gris-6\@tablet {
+    border-color: #B0B0B0;
+  }
+  .g--border-color-gris-7\@tablet {
+    border-color: #C9C9C9;
+  }
+  .g--border-color-gris-8\@tablet {
+    border-color: #E6E6E6;
+  }
+  .g--border-color-blanco-0\@tablet {
+    border-color: #EBEBEB;
+  }
+  .g--border-color-blanco-1\@tablet {
+    border-color: #EDEDED;
+  }
+  .g--border-color-blanco-2\@tablet {
+    border-color: #F0F0F0;
+  }
+  .g--border-color-blanco-3\@tablet {
+    border-color: #F2F2F2;
+  }
+  .g--border-color-blanco-4\@tablet {
+    border-color: #F5F5F5;
+  }
+  .g--border-color-blanco-5\@tablet {
+    border-color: #F7F7F7;
+  }
+  .g--border-color-blanco-6\@tablet {
+    border-color: #FAFAFA;
+  }
+  .g--border-color-blanco-7\@tablet {
+    border-color: #FCFCFC;
+  }
+  .g--border-color-blanco-8\@tablet {
+    border-color: #FFFFFF;
+  }
+  .g--border-color-rojo-0\@tablet {
+    border-color: #811D1D;
+  }
+  .g--border-color-rojo-1\@tablet {
+    border-color: #981B1B;
+  }
+  .g--border-color-rojo-2\@tablet {
+    border-color: #BA1C1C;
+  }
+  .g--border-color-rojo-3\@tablet {
+    border-color: #DC2828;
+  }
+  .g--border-color-rojo-4\@tablet {
+    border-color: #EF4343;
+  }
+  .g--border-color-rojo-5\@tablet {
+    border-color: #F87272;
+  }
+  .g--border-color-rojo-6\@tablet {
+    border-color: #FCA6A6;
+  }
+  .g--border-color-rojo-7\@tablet {
+    border-color: #FEC8C8;
+  }
+  .g--border-color-rojo-8\@tablet {
+    border-color: #FFFFFF;
+  }
+  .g--border-color-verde-0\@tablet {
+    border-color: #064C39;
+  }
+  .g--border-color-verde-1\@tablet {
+    border-color: #066046;
+  }
+  .g--border-color-verde-2\@tablet {
+    border-color: #047756;
+  }
+  .g--border-color-verde-3\@tablet {
+    border-color: #059467;
+  }
+  .g--border-color-verde-4\@tablet {
+    border-color: #10B77F;
+  }
+  .g--border-color-verde-5\@tablet {
+    border-color: #36D399;
+  }
+  .g--border-color-verde-6\@tablet {
+    border-color: #6EE7B7;
+  }
+  .g--border-color-verde-7\@tablet {
+    border-color: #A5F3CF;
+  }
+  .g--border-color-verde-8\@tablet {
+    border-color: #D1FAE5;
+  }
+  .g--border-color-azul-0\@tablet {
+    border-color: #1E3B8A;
+  }
+  .g--border-color-azul-1\@tablet {
+    border-color: #1E3FAE;
+  }
+  .g--border-color-azul-2\@tablet {
+    border-color: #1D4FD7;
+  }
+  .g--border-color-azul-3\@tablet {
+    border-color: #2463EB;
+  }
+  .g--border-color-azul-4\@tablet {
+    border-color: #3C83F6;
+  }
+  .g--border-color-azul-5\@tablet {
+    border-color: #61A6FA;
+  }
+  .g--border-color-azul-6\@tablet {
+    border-color: #91C3FD;
+  }
+  .g--border-color-azul-7\@tablet {
+    border-color: #BEDBFE;
+  }
+  .g--border-color-azul-8\@tablet {
+    border-color: #DCEBFE;
+  }
+  .g--border-color-turquesa-0\@tablet {
+    border-color: #011619;
+  }
+  .g--border-color-turquesa-1\@tablet {
+    border-color: #01323C;
+  }
+  .g--border-color-turquesa-2\@tablet {
+    border-color: #015165;
+  }
+  .g--border-color-turquesa-3\@tablet {
+    border-color: #00678A;
+  }
+  .g--border-color-turquesa-4\@tablet {
+    border-color: #007CAD;
+  }
+  .g--border-color-turquesa-5\@tablet {
+    border-color: #008BD1;
+  }
+  .g--border-color-turquesa-6\@tablet {
+    border-color: #019EF9;
+  }
+  .g--border-color-turquesa-7\@tablet {
+    border-color: #22A1FC;
+  }
+  .g--border-color-turquesa-8\@tablet {
+    border-color: #47AAFA;
+  }
+  .g--border-color-morado-0\@tablet {
+    border-color: #4c1d95;
+  }
+  .g--border-color-morado-1\@tablet {
+    border-color: #5b21b6;
+  }
+  .g--border-color-morado-2\@tablet {
+    border-color: #6d28d9;
+  }
+  .g--border-color-morado-3\@tablet {
+    border-color: #7c3aed;
+  }
+  .g--border-color-morado-4\@tablet {
+    border-color: #8b5cf6;
+  }
+  .g--border-color-morado-5\@tablet {
+    border-color: #a78bfa;
+  }
+  .g--border-color-morado-6\@tablet {
+    border-color: #c4b5fd;
+  }
+  .g--border-color-morado-7\@tablet {
+    border-color: #ddd6fe;
+  }
+  .g--border-color-morado-8\@tablet {
+    border-color: #ede9fe;
+  }
+  .g--border-color-amarillo-0\@tablet {
+    border-color: #76350F;
+  }
+  .g--border-color-amarillo-1\@tablet {
+    border-color: #91400D;
+  }
+  .g--border-color-amarillo-2\@tablet {
+    border-color: #B35309;
+  }
+  .g--border-color-amarillo-3\@tablet {
+    border-color: #DB7706;
+  }
+  .g--border-color-amarillo-4\@tablet {
+    border-color: #F59F0A;
+  }
+  .g--border-color-amarillo-5\@tablet {
+    border-color: #FBBD23;
+  }
+  .g--border-color-amarillo-6\@tablet {
+    border-color: #FCD44F;
+  }
+  .g--border-color-amarillo-7\@tablet {
+    border-color: #FDE68B;
+  }
+  .g--border-color-amarillo-8\@tablet {
+    border-color: #FEF3C8;
+  }
+  .g--border-color-rosas-0\@tablet {
+    border-color: #811842;
+  }
+  .g--border-color-rosas-1\@tablet {
+    border-color: #9B174C;
+  }
+  .g--border-color-rosas-2\@tablet {
+    border-color: #BF185D;
+  }
+  .g--border-color-rosas-3\@tablet {
+    border-color: #DB2979;
+  }
+  .g--border-color-rosas-4\@tablet {
+    border-color: #EC4699;
+  }
+  .g--border-color-rosas-5\@tablet {
+    border-color: #F471B5;
+  }
+  .g--border-color-rosas-6\@tablet {
+    border-color: #F9A9D5;
+  }
+  .g--border-color-rosas-7\@tablet {
+    border-color: #FBD0E8;
+  }
+  .g--border-color-rosas-8\@tablet {
+    border-color: #FCE8F4;
+  }
+}
+@media (min-width: 1600px) {
+  .g--border-color-principal-0\@desktop {
+    border-color: #1E3B8A;
+  }
+  .g--border-color-principal-1\@desktop {
+    border-color: #1E3FAE;
+  }
+  .g--border-color-principal-2\@desktop {
+    border-color: #1D4FD7;
+  }
+  .g--border-color-principal-3\@desktop {
+    border-color: #2463EB;
+  }
+  .g--border-color-principal-4\@desktop {
+    border-color: #3C83F6;
+  }
+  .g--border-color-principal-5\@desktop {
+    border-color: #61A6FA;
+  }
+  .g--border-color-principal-6\@desktop {
+    border-color: #91C3FD;
+  }
+  .g--border-color-principal-7\@desktop {
+    border-color: #BEDBFE;
+  }
+  .g--border-color-principal-8\@desktop {
+    border-color: #DCEBFE;
+  }
+  .g--border-color-alternativo-0\@desktop {
+    border-color: #76350F;
+  }
+  .g--border-color-alternativo-1\@desktop {
+    border-color: #91400D;
+  }
+  .g--border-color-alternativo-2\@desktop {
+    border-color: #B35309;
+  }
+  .g--border-color-alternativo-3\@desktop {
+    border-color: #DB7706;
+  }
+  .g--border-color-alternativo-4\@desktop {
+    border-color: #F59F0A;
+  }
+  .g--border-color-alternativo-5\@desktop {
+    border-color: #FBBD23;
+  }
+  .g--border-color-alternativo-6\@desktop {
+    border-color: #FCD44F;
+  }
+  .g--border-color-alternativo-7\@desktop {
+    border-color: #FDE68B;
+  }
+  .g--border-color-alternativo-8\@desktop {
+    border-color: #FEF3C8;
+  }
+  .g--border-color-gris-0\@desktop {
+    border-color: #171717;
+  }
+  .g--border-color-gris-1\@desktop {
+    border-color: #292929;
+  }
+  .g--border-color-gris-2\@desktop {
+    border-color: #454545;
+  }
+  .g--border-color-gris-3\@desktop {
+    border-color: #5E5E5E;
+  }
+  .g--border-color-gris-4\@desktop {
+    border-color: #7A7A7A;
+  }
+  .g--border-color-gris-5\@desktop {
+    border-color: #949494;
+  }
+  .g--border-color-gris-6\@desktop {
+    border-color: #B0B0B0;
+  }
+  .g--border-color-gris-7\@desktop {
+    border-color: #C9C9C9;
+  }
+  .g--border-color-gris-8\@desktop {
+    border-color: #E6E6E6;
+  }
+  .g--border-color-blanco-0\@desktop {
+    border-color: #EBEBEB;
+  }
+  .g--border-color-blanco-1\@desktop {
+    border-color: #EDEDED;
+  }
+  .g--border-color-blanco-2\@desktop {
+    border-color: #F0F0F0;
+  }
+  .g--border-color-blanco-3\@desktop {
+    border-color: #F2F2F2;
+  }
+  .g--border-color-blanco-4\@desktop {
+    border-color: #F5F5F5;
+  }
+  .g--border-color-blanco-5\@desktop {
+    border-color: #F7F7F7;
+  }
+  .g--border-color-blanco-6\@desktop {
+    border-color: #FAFAFA;
+  }
+  .g--border-color-blanco-7\@desktop {
+    border-color: #FCFCFC;
+  }
+  .g--border-color-blanco-8\@desktop {
+    border-color: #FFFFFF;
+  }
+  .g--border-color-rojo-0\@desktop {
+    border-color: #811D1D;
+  }
+  .g--border-color-rojo-1\@desktop {
+    border-color: #981B1B;
+  }
+  .g--border-color-rojo-2\@desktop {
+    border-color: #BA1C1C;
+  }
+  .g--border-color-rojo-3\@desktop {
+    border-color: #DC2828;
+  }
+  .g--border-color-rojo-4\@desktop {
+    border-color: #EF4343;
+  }
+  .g--border-color-rojo-5\@desktop {
+    border-color: #F87272;
+  }
+  .g--border-color-rojo-6\@desktop {
+    border-color: #FCA6A6;
+  }
+  .g--border-color-rojo-7\@desktop {
+    border-color: #FEC8C8;
+  }
+  .g--border-color-rojo-8\@desktop {
+    border-color: #FFFFFF;
+  }
+  .g--border-color-verde-0\@desktop {
+    border-color: #064C39;
+  }
+  .g--border-color-verde-1\@desktop {
+    border-color: #066046;
+  }
+  .g--border-color-verde-2\@desktop {
+    border-color: #047756;
+  }
+  .g--border-color-verde-3\@desktop {
+    border-color: #059467;
+  }
+  .g--border-color-verde-4\@desktop {
+    border-color: #10B77F;
+  }
+  .g--border-color-verde-5\@desktop {
+    border-color: #36D399;
+  }
+  .g--border-color-verde-6\@desktop {
+    border-color: #6EE7B7;
+  }
+  .g--border-color-verde-7\@desktop {
+    border-color: #A5F3CF;
+  }
+  .g--border-color-verde-8\@desktop {
+    border-color: #D1FAE5;
+  }
+  .g--border-color-azul-0\@desktop {
+    border-color: #1E3B8A;
+  }
+  .g--border-color-azul-1\@desktop {
+    border-color: #1E3FAE;
+  }
+  .g--border-color-azul-2\@desktop {
+    border-color: #1D4FD7;
+  }
+  .g--border-color-azul-3\@desktop {
+    border-color: #2463EB;
+  }
+  .g--border-color-azul-4\@desktop {
+    border-color: #3C83F6;
+  }
+  .g--border-color-azul-5\@desktop {
+    border-color: #61A6FA;
+  }
+  .g--border-color-azul-6\@desktop {
+    border-color: #91C3FD;
+  }
+  .g--border-color-azul-7\@desktop {
+    border-color: #BEDBFE;
+  }
+  .g--border-color-azul-8\@desktop {
+    border-color: #DCEBFE;
+  }
+  .g--border-color-turquesa-0\@desktop {
+    border-color: #011619;
+  }
+  .g--border-color-turquesa-1\@desktop {
+    border-color: #01323C;
+  }
+  .g--border-color-turquesa-2\@desktop {
+    border-color: #015165;
+  }
+  .g--border-color-turquesa-3\@desktop {
+    border-color: #00678A;
+  }
+  .g--border-color-turquesa-4\@desktop {
+    border-color: #007CAD;
+  }
+  .g--border-color-turquesa-5\@desktop {
+    border-color: #008BD1;
+  }
+  .g--border-color-turquesa-6\@desktop {
+    border-color: #019EF9;
+  }
+  .g--border-color-turquesa-7\@desktop {
+    border-color: #22A1FC;
+  }
+  .g--border-color-turquesa-8\@desktop {
+    border-color: #47AAFA;
+  }
+  .g--border-color-morado-0\@desktop {
+    border-color: #4c1d95;
+  }
+  .g--border-color-morado-1\@desktop {
+    border-color: #5b21b6;
+  }
+  .g--border-color-morado-2\@desktop {
+    border-color: #6d28d9;
+  }
+  .g--border-color-morado-3\@desktop {
+    border-color: #7c3aed;
+  }
+  .g--border-color-morado-4\@desktop {
+    border-color: #8b5cf6;
+  }
+  .g--border-color-morado-5\@desktop {
+    border-color: #a78bfa;
+  }
+  .g--border-color-morado-6\@desktop {
+    border-color: #c4b5fd;
+  }
+  .g--border-color-morado-7\@desktop {
+    border-color: #ddd6fe;
+  }
+  .g--border-color-morado-8\@desktop {
+    border-color: #ede9fe;
+  }
+  .g--border-color-amarillo-0\@desktop {
+    border-color: #76350F;
+  }
+  .g--border-color-amarillo-1\@desktop {
+    border-color: #91400D;
+  }
+  .g--border-color-amarillo-2\@desktop {
+    border-color: #B35309;
+  }
+  .g--border-color-amarillo-3\@desktop {
+    border-color: #DB7706;
+  }
+  .g--border-color-amarillo-4\@desktop {
+    border-color: #F59F0A;
+  }
+  .g--border-color-amarillo-5\@desktop {
+    border-color: #FBBD23;
+  }
+  .g--border-color-amarillo-6\@desktop {
+    border-color: #FCD44F;
+  }
+  .g--border-color-amarillo-7\@desktop {
+    border-color: #FDE68B;
+  }
+  .g--border-color-amarillo-8\@desktop {
+    border-color: #FEF3C8;
+  }
+  .g--border-color-rosas-0\@desktop {
+    border-color: #811842;
+  }
+  .g--border-color-rosas-1\@desktop {
+    border-color: #9B174C;
+  }
+  .g--border-color-rosas-2\@desktop {
+    border-color: #BF185D;
+  }
+  .g--border-color-rosas-3\@desktop {
+    border-color: #DB2979;
+  }
+  .g--border-color-rosas-4\@desktop {
+    border-color: #EC4699;
+  }
+  .g--border-color-rosas-5\@desktop {
+    border-color: #F471B5;
+  }
+  .g--border-color-rosas-6\@desktop {
+    border-color: #F9A9D5;
+  }
+  .g--border-color-rosas-7\@desktop {
+    border-color: #FBD0E8;
+  }
+  .g--border-color-rosas-8\@desktop {
+    border-color: #FCE8F4;
+  }
+}
 .g--border-radius-0 {
   border-radius: 0px;
 }
@@ -2023,6 +4716,84 @@ table {
   border-radius: 64px;
 }
 
+@media (min-width: 1250px) {
+  .g--border-radius-0\@mobil {
+    border-radius: 0px;
+  }
+  .g--border-radius-1\@mobil {
+    border-radius: 2px;
+  }
+  .g--border-radius-2\@mobil {
+    border-radius: 4px;
+  }
+  .g--border-radius-3\@mobil {
+    border-radius: 6px;
+  }
+  .g--border-radius-4\@mobil {
+    border-radius: 8px;
+  }
+  .g--border-radius-5\@mobil {
+    border-radius: 16px;
+  }
+  .g--border-radius-6\@mobil {
+    border-radius: 32px;
+  }
+  .g--border-radius-7\@mobil {
+    border-radius: 64px;
+  }
+}
+@media (min-width: 1500px) {
+  .g--border-radius-0\@tablet {
+    border-radius: 0px;
+  }
+  .g--border-radius-1\@tablet {
+    border-radius: 2px;
+  }
+  .g--border-radius-2\@tablet {
+    border-radius: 4px;
+  }
+  .g--border-radius-3\@tablet {
+    border-radius: 6px;
+  }
+  .g--border-radius-4\@tablet {
+    border-radius: 8px;
+  }
+  .g--border-radius-5\@tablet {
+    border-radius: 16px;
+  }
+  .g--border-radius-6\@tablet {
+    border-radius: 32px;
+  }
+  .g--border-radius-7\@tablet {
+    border-radius: 64px;
+  }
+}
+@media (min-width: 1600px) {
+  .g--border-radius-0\@desktop {
+    border-radius: 0px;
+  }
+  .g--border-radius-1\@desktop {
+    border-radius: 2px;
+  }
+  .g--border-radius-2\@desktop {
+    border-radius: 4px;
+  }
+  .g--border-radius-3\@desktop {
+    border-radius: 6px;
+  }
+  .g--border-radius-4\@desktop {
+    border-radius: 8px;
+  }
+  .g--border-radius-5\@desktop {
+    border-radius: 16px;
+  }
+  .g--border-radius-6\@desktop {
+    border-radius: 32px;
+  }
+  .g--border-radius-7\@desktop {
+    border-radius: 64px;
+  }
+}
 .g--padding-0 {
   padding: 0px;
 }
@@ -2713,6 +5484,1599 @@ table {
   padding-bottom: 640px;
 }
 
+@media (min-width: 1250px) {
+  .g--padding-0\@mobil {
+    padding: 0px;
+  }
+  .g--padding-left-0\@mobil {
+    padding-left: 0px;
+  }
+  .g--padding-right-0\@mobil {
+    padding-right: 0px;
+  }
+  .g--padding-top-0\@mobil {
+    padding-top: 0px;
+  }
+  .g--padding-bottom-0\@mobil {
+    padding-bottom: 0px;
+  }
+  .g--padding-horizontal-0\@mobil {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .g--padding-vertical-0\@mobil {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .g--padding-1\@mobil {
+    padding: 4px;
+  }
+  .g--padding-left-1\@mobil {
+    padding-left: 4px;
+  }
+  .g--padding-right-1\@mobil {
+    padding-right: 4px;
+  }
+  .g--padding-top-1\@mobil {
+    padding-top: 4px;
+  }
+  .g--padding-bottom-1\@mobil {
+    padding-bottom: 4px;
+  }
+  .g--padding-horizontal-1\@mobil {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+  .g--padding-vertical-1\@mobil {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .g--padding-2\@mobil {
+    padding: 6px;
+  }
+  .g--padding-left-2\@mobil {
+    padding-left: 6px;
+  }
+  .g--padding-right-2\@mobil {
+    padding-right: 6px;
+  }
+  .g--padding-top-2\@mobil {
+    padding-top: 6px;
+  }
+  .g--padding-bottom-2\@mobil {
+    padding-bottom: 6px;
+  }
+  .g--padding-horizontal-2\@mobil {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+  .g--padding-vertical-2\@mobil {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .g--padding-3\@mobil {
+    padding: 8px;
+  }
+  .g--padding-left-3\@mobil {
+    padding-left: 8px;
+  }
+  .g--padding-right-3\@mobil {
+    padding-right: 8px;
+  }
+  .g--padding-top-3\@mobil {
+    padding-top: 8px;
+  }
+  .g--padding-bottom-3\@mobil {
+    padding-bottom: 8px;
+  }
+  .g--padding-horizontal-3\@mobil {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .g--padding-vertical-3\@mobil {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .g--padding-4\@mobil {
+    padding: 10px;
+  }
+  .g--padding-left-4\@mobil {
+    padding-left: 10px;
+  }
+  .g--padding-right-4\@mobil {
+    padding-right: 10px;
+  }
+  .g--padding-top-4\@mobil {
+    padding-top: 10px;
+  }
+  .g--padding-bottom-4\@mobil {
+    padding-bottom: 10px;
+  }
+  .g--padding-horizontal-4\@mobil {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .g--padding-vertical-4\@mobil {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .g--padding-5\@mobil {
+    padding: 12px;
+  }
+  .g--padding-left-5\@mobil {
+    padding-left: 12px;
+  }
+  .g--padding-right-5\@mobil {
+    padding-right: 12px;
+  }
+  .g--padding-top-5\@mobil {
+    padding-top: 12px;
+  }
+  .g--padding-bottom-5\@mobil {
+    padding-bottom: 12px;
+  }
+  .g--padding-horizontal-5\@mobil {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  .g--padding-vertical-5\@mobil {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .g--padding-6\@mobil {
+    padding: 16px;
+  }
+  .g--padding-left-6\@mobil {
+    padding-left: 16px;
+  }
+  .g--padding-right-6\@mobil {
+    padding-right: 16px;
+  }
+  .g--padding-top-6\@mobil {
+    padding-top: 16px;
+  }
+  .g--padding-bottom-6\@mobil {
+    padding-bottom: 16px;
+  }
+  .g--padding-horizontal-6\@mobil {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .g--padding-vertical-6\@mobil {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .g--padding-7\@mobil {
+    padding: 20px;
+  }
+  .g--padding-left-7\@mobil {
+    padding-left: 20px;
+  }
+  .g--padding-right-7\@mobil {
+    padding-right: 20px;
+  }
+  .g--padding-top-7\@mobil {
+    padding-top: 20px;
+  }
+  .g--padding-bottom-7\@mobil {
+    padding-bottom: 20px;
+  }
+  .g--padding-horizontal-7\@mobil {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .g--padding-vertical-7\@mobil {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .g--padding-8\@mobil {
+    padding: 24px;
+  }
+  .g--padding-left-8\@mobil {
+    padding-left: 24px;
+  }
+  .g--padding-right-8\@mobil {
+    padding-right: 24px;
+  }
+  .g--padding-top-8\@mobil {
+    padding-top: 24px;
+  }
+  .g--padding-bottom-8\@mobil {
+    padding-bottom: 24px;
+  }
+  .g--padding-horizontal-8\@mobil {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  .g--padding-vertical-8\@mobil {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .g--padding-9\@mobil {
+    padding: 32px;
+  }
+  .g--padding-left-9\@mobil {
+    padding-left: 32px;
+  }
+  .g--padding-right-9\@mobil {
+    padding-right: 32px;
+  }
+  .g--padding-top-9\@mobil {
+    padding-top: 32px;
+  }
+  .g--padding-bottom-9\@mobil {
+    padding-bottom: 32px;
+  }
+  .g--padding-horizontal-9\@mobil {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+  .g--padding-vertical-9\@mobil {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .g--padding-10\@mobil {
+    padding: 40px;
+  }
+  .g--padding-left-10\@mobil {
+    padding-left: 40px;
+  }
+  .g--padding-right-10\@mobil {
+    padding-right: 40px;
+  }
+  .g--padding-top-10\@mobil {
+    padding-top: 40px;
+  }
+  .g--padding-bottom-10\@mobil {
+    padding-bottom: 40px;
+  }
+  .g--padding-horizontal-10\@mobil {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .g--padding-vertical-10\@mobil {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .g--padding-11\@mobil {
+    padding: 48px;
+  }
+  .g--padding-left-11\@mobil {
+    padding-left: 48px;
+  }
+  .g--padding-right-11\@mobil {
+    padding-right: 48px;
+  }
+  .g--padding-top-11\@mobil {
+    padding-top: 48px;
+  }
+  .g--padding-bottom-11\@mobil {
+    padding-bottom: 48px;
+  }
+  .g--padding-horizontal-11\@mobil {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+  .g--padding-vertical-11\@mobil {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .g--padding-12\@mobil {
+    padding: 64px;
+  }
+  .g--padding-left-12\@mobil {
+    padding-left: 64px;
+  }
+  .g--padding-right-12\@mobil {
+    padding-right: 64px;
+  }
+  .g--padding-top-12\@mobil {
+    padding-top: 64px;
+  }
+  .g--padding-bottom-12\@mobil {
+    padding-bottom: 64px;
+  }
+  .g--padding-horizontal-12\@mobil {
+    padding-right: 64px;
+    padding-left: 64px;
+  }
+  .g--padding-vertical-12\@mobil {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .g--padding-13\@mobil {
+    padding: 80px;
+  }
+  .g--padding-left-13\@mobil {
+    padding-left: 80px;
+  }
+  .g--padding-right-13\@mobil {
+    padding-right: 80px;
+  }
+  .g--padding-top-13\@mobil {
+    padding-top: 80px;
+  }
+  .g--padding-bottom-13\@mobil {
+    padding-bottom: 80px;
+  }
+  .g--padding-horizontal-13\@mobil {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+  .g--padding-vertical-13\@mobil {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .g--padding-14\@mobil {
+    padding: 96px;
+  }
+  .g--padding-left-14\@mobil {
+    padding-left: 96px;
+  }
+  .g--padding-right-14\@mobil {
+    padding-right: 96px;
+  }
+  .g--padding-top-14\@mobil {
+    padding-top: 96px;
+  }
+  .g--padding-bottom-14\@mobil {
+    padding-bottom: 96px;
+  }
+  .g--padding-horizontal-14\@mobil {
+    padding-right: 96px;
+    padding-left: 96px;
+  }
+  .g--padding-vertical-14\@mobil {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .g--padding-15\@mobil {
+    padding: 128px;
+  }
+  .g--padding-left-15\@mobil {
+    padding-left: 128px;
+  }
+  .g--padding-right-15\@mobil {
+    padding-right: 128px;
+  }
+  .g--padding-top-15\@mobil {
+    padding-top: 128px;
+  }
+  .g--padding-bottom-15\@mobil {
+    padding-bottom: 128px;
+  }
+  .g--padding-horizontal-15\@mobil {
+    padding-right: 128px;
+    padding-left: 128px;
+  }
+  .g--padding-vertical-15\@mobil {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+  .g--padding-16\@mobil {
+    padding: 160px;
+  }
+  .g--padding-left-16\@mobil {
+    padding-left: 160px;
+  }
+  .g--padding-right-16\@mobil {
+    padding-right: 160px;
+  }
+  .g--padding-top-16\@mobil {
+    padding-top: 160px;
+  }
+  .g--padding-bottom-16\@mobil {
+    padding-bottom: 160px;
+  }
+  .g--padding-horizontal-16\@mobil {
+    padding-right: 160px;
+    padding-left: 160px;
+  }
+  .g--padding-vertical-16\@mobil {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+  .g--padding-17\@mobil {
+    padding: 192px;
+  }
+  .g--padding-left-17\@mobil {
+    padding-left: 192px;
+  }
+  .g--padding-right-17\@mobil {
+    padding-right: 192px;
+  }
+  .g--padding-top-17\@mobil {
+    padding-top: 192px;
+  }
+  .g--padding-bottom-17\@mobil {
+    padding-bottom: 192px;
+  }
+  .g--padding-horizontal-17\@mobil {
+    padding-right: 192px;
+    padding-left: 192px;
+  }
+  .g--padding-vertical-17\@mobil {
+    padding-top: 192px;
+    padding-bottom: 192px;
+  }
+  .g--padding-18\@mobil {
+    padding: 224px;
+  }
+  .g--padding-left-18\@mobil {
+    padding-left: 224px;
+  }
+  .g--padding-right-18\@mobil {
+    padding-right: 224px;
+  }
+  .g--padding-top-18\@mobil {
+    padding-top: 224px;
+  }
+  .g--padding-bottom-18\@mobil {
+    padding-bottom: 224px;
+  }
+  .g--padding-horizontal-18\@mobil {
+    padding-right: 224px;
+    padding-left: 224px;
+  }
+  .g--padding-vertical-18\@mobil {
+    padding-top: 224px;
+    padding-bottom: 224px;
+  }
+  .g--padding-19\@mobil {
+    padding: 256px;
+  }
+  .g--padding-left-19\@mobil {
+    padding-left: 256px;
+  }
+  .g--padding-right-19\@mobil {
+    padding-right: 256px;
+  }
+  .g--padding-top-19\@mobil {
+    padding-top: 256px;
+  }
+  .g--padding-bottom-19\@mobil {
+    padding-bottom: 256px;
+  }
+  .g--padding-horizontal-19\@mobil {
+    padding-right: 256px;
+    padding-left: 256px;
+  }
+  .g--padding-vertical-19\@mobil {
+    padding-top: 256px;
+    padding-bottom: 256px;
+  }
+  .g--padding-20\@mobil {
+    padding: 320px;
+  }
+  .g--padding-left-20\@mobil {
+    padding-left: 320px;
+  }
+  .g--padding-right-20\@mobil {
+    padding-right: 320px;
+  }
+  .g--padding-top-20\@mobil {
+    padding-top: 320px;
+  }
+  .g--padding-bottom-20\@mobil {
+    padding-bottom: 320px;
+  }
+  .g--padding-horizontal-20\@mobil {
+    padding-right: 320px;
+    padding-left: 320px;
+  }
+  .g--padding-vertical-20\@mobil {
+    padding-top: 320px;
+    padding-bottom: 320px;
+  }
+  .g--padding-21\@mobil {
+    padding: 480px;
+  }
+  .g--padding-left-21\@mobil {
+    padding-left: 480px;
+  }
+  .g--padding-right-21\@mobil {
+    padding-right: 480px;
+  }
+  .g--padding-top-21\@mobil {
+    padding-top: 480px;
+  }
+  .g--padding-bottom-21\@mobil {
+    padding-bottom: 480px;
+  }
+  .g--padding-horizontal-21\@mobil {
+    padding-right: 480px;
+    padding-left: 480px;
+  }
+  .g--padding-vertical-21\@mobil {
+    padding-top: 480px;
+    padding-bottom: 480px;
+  }
+  .g--padding-22\@mobil {
+    padding: 640px;
+  }
+  .g--padding-left-22\@mobil {
+    padding-left: 640px;
+  }
+  .g--padding-right-22\@mobil {
+    padding-right: 640px;
+  }
+  .g--padding-top-22\@mobil {
+    padding-top: 640px;
+  }
+  .g--padding-bottom-22\@mobil {
+    padding-bottom: 640px;
+  }
+  .g--padding-horizontal-22\@mobil {
+    padding-right: 640px;
+    padding-left: 640px;
+  }
+  .g--padding-vertical-22\@mobil {
+    padding-top: 640px;
+    padding-bottom: 640px;
+  }
+}
+@media (min-width: 1500px) {
+  .g--padding-0\@tablet {
+    padding: 0px;
+  }
+  .g--padding-left-0\@tablet {
+    padding-left: 0px;
+  }
+  .g--padding-right-0\@tablet {
+    padding-right: 0px;
+  }
+  .g--padding-top-0\@tablet {
+    padding-top: 0px;
+  }
+  .g--padding-bottom-0\@tablet {
+    padding-bottom: 0px;
+  }
+  .g--padding-horizontal-0\@tablet {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .g--padding-vertical-0\@tablet {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .g--padding-1\@tablet {
+    padding: 4px;
+  }
+  .g--padding-left-1\@tablet {
+    padding-left: 4px;
+  }
+  .g--padding-right-1\@tablet {
+    padding-right: 4px;
+  }
+  .g--padding-top-1\@tablet {
+    padding-top: 4px;
+  }
+  .g--padding-bottom-1\@tablet {
+    padding-bottom: 4px;
+  }
+  .g--padding-horizontal-1\@tablet {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+  .g--padding-vertical-1\@tablet {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .g--padding-2\@tablet {
+    padding: 6px;
+  }
+  .g--padding-left-2\@tablet {
+    padding-left: 6px;
+  }
+  .g--padding-right-2\@tablet {
+    padding-right: 6px;
+  }
+  .g--padding-top-2\@tablet {
+    padding-top: 6px;
+  }
+  .g--padding-bottom-2\@tablet {
+    padding-bottom: 6px;
+  }
+  .g--padding-horizontal-2\@tablet {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+  .g--padding-vertical-2\@tablet {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .g--padding-3\@tablet {
+    padding: 8px;
+  }
+  .g--padding-left-3\@tablet {
+    padding-left: 8px;
+  }
+  .g--padding-right-3\@tablet {
+    padding-right: 8px;
+  }
+  .g--padding-top-3\@tablet {
+    padding-top: 8px;
+  }
+  .g--padding-bottom-3\@tablet {
+    padding-bottom: 8px;
+  }
+  .g--padding-horizontal-3\@tablet {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .g--padding-vertical-3\@tablet {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .g--padding-4\@tablet {
+    padding: 10px;
+  }
+  .g--padding-left-4\@tablet {
+    padding-left: 10px;
+  }
+  .g--padding-right-4\@tablet {
+    padding-right: 10px;
+  }
+  .g--padding-top-4\@tablet {
+    padding-top: 10px;
+  }
+  .g--padding-bottom-4\@tablet {
+    padding-bottom: 10px;
+  }
+  .g--padding-horizontal-4\@tablet {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .g--padding-vertical-4\@tablet {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .g--padding-5\@tablet {
+    padding: 12px;
+  }
+  .g--padding-left-5\@tablet {
+    padding-left: 12px;
+  }
+  .g--padding-right-5\@tablet {
+    padding-right: 12px;
+  }
+  .g--padding-top-5\@tablet {
+    padding-top: 12px;
+  }
+  .g--padding-bottom-5\@tablet {
+    padding-bottom: 12px;
+  }
+  .g--padding-horizontal-5\@tablet {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  .g--padding-vertical-5\@tablet {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .g--padding-6\@tablet {
+    padding: 16px;
+  }
+  .g--padding-left-6\@tablet {
+    padding-left: 16px;
+  }
+  .g--padding-right-6\@tablet {
+    padding-right: 16px;
+  }
+  .g--padding-top-6\@tablet {
+    padding-top: 16px;
+  }
+  .g--padding-bottom-6\@tablet {
+    padding-bottom: 16px;
+  }
+  .g--padding-horizontal-6\@tablet {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .g--padding-vertical-6\@tablet {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .g--padding-7\@tablet {
+    padding: 20px;
+  }
+  .g--padding-left-7\@tablet {
+    padding-left: 20px;
+  }
+  .g--padding-right-7\@tablet {
+    padding-right: 20px;
+  }
+  .g--padding-top-7\@tablet {
+    padding-top: 20px;
+  }
+  .g--padding-bottom-7\@tablet {
+    padding-bottom: 20px;
+  }
+  .g--padding-horizontal-7\@tablet {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .g--padding-vertical-7\@tablet {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .g--padding-8\@tablet {
+    padding: 24px;
+  }
+  .g--padding-left-8\@tablet {
+    padding-left: 24px;
+  }
+  .g--padding-right-8\@tablet {
+    padding-right: 24px;
+  }
+  .g--padding-top-8\@tablet {
+    padding-top: 24px;
+  }
+  .g--padding-bottom-8\@tablet {
+    padding-bottom: 24px;
+  }
+  .g--padding-horizontal-8\@tablet {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  .g--padding-vertical-8\@tablet {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .g--padding-9\@tablet {
+    padding: 32px;
+  }
+  .g--padding-left-9\@tablet {
+    padding-left: 32px;
+  }
+  .g--padding-right-9\@tablet {
+    padding-right: 32px;
+  }
+  .g--padding-top-9\@tablet {
+    padding-top: 32px;
+  }
+  .g--padding-bottom-9\@tablet {
+    padding-bottom: 32px;
+  }
+  .g--padding-horizontal-9\@tablet {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+  .g--padding-vertical-9\@tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .g--padding-10\@tablet {
+    padding: 40px;
+  }
+  .g--padding-left-10\@tablet {
+    padding-left: 40px;
+  }
+  .g--padding-right-10\@tablet {
+    padding-right: 40px;
+  }
+  .g--padding-top-10\@tablet {
+    padding-top: 40px;
+  }
+  .g--padding-bottom-10\@tablet {
+    padding-bottom: 40px;
+  }
+  .g--padding-horizontal-10\@tablet {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .g--padding-vertical-10\@tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .g--padding-11\@tablet {
+    padding: 48px;
+  }
+  .g--padding-left-11\@tablet {
+    padding-left: 48px;
+  }
+  .g--padding-right-11\@tablet {
+    padding-right: 48px;
+  }
+  .g--padding-top-11\@tablet {
+    padding-top: 48px;
+  }
+  .g--padding-bottom-11\@tablet {
+    padding-bottom: 48px;
+  }
+  .g--padding-horizontal-11\@tablet {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+  .g--padding-vertical-11\@tablet {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .g--padding-12\@tablet {
+    padding: 64px;
+  }
+  .g--padding-left-12\@tablet {
+    padding-left: 64px;
+  }
+  .g--padding-right-12\@tablet {
+    padding-right: 64px;
+  }
+  .g--padding-top-12\@tablet {
+    padding-top: 64px;
+  }
+  .g--padding-bottom-12\@tablet {
+    padding-bottom: 64px;
+  }
+  .g--padding-horizontal-12\@tablet {
+    padding-right: 64px;
+    padding-left: 64px;
+  }
+  .g--padding-vertical-12\@tablet {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .g--padding-13\@tablet {
+    padding: 80px;
+  }
+  .g--padding-left-13\@tablet {
+    padding-left: 80px;
+  }
+  .g--padding-right-13\@tablet {
+    padding-right: 80px;
+  }
+  .g--padding-top-13\@tablet {
+    padding-top: 80px;
+  }
+  .g--padding-bottom-13\@tablet {
+    padding-bottom: 80px;
+  }
+  .g--padding-horizontal-13\@tablet {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+  .g--padding-vertical-13\@tablet {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .g--padding-14\@tablet {
+    padding: 96px;
+  }
+  .g--padding-left-14\@tablet {
+    padding-left: 96px;
+  }
+  .g--padding-right-14\@tablet {
+    padding-right: 96px;
+  }
+  .g--padding-top-14\@tablet {
+    padding-top: 96px;
+  }
+  .g--padding-bottom-14\@tablet {
+    padding-bottom: 96px;
+  }
+  .g--padding-horizontal-14\@tablet {
+    padding-right: 96px;
+    padding-left: 96px;
+  }
+  .g--padding-vertical-14\@tablet {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .g--padding-15\@tablet {
+    padding: 128px;
+  }
+  .g--padding-left-15\@tablet {
+    padding-left: 128px;
+  }
+  .g--padding-right-15\@tablet {
+    padding-right: 128px;
+  }
+  .g--padding-top-15\@tablet {
+    padding-top: 128px;
+  }
+  .g--padding-bottom-15\@tablet {
+    padding-bottom: 128px;
+  }
+  .g--padding-horizontal-15\@tablet {
+    padding-right: 128px;
+    padding-left: 128px;
+  }
+  .g--padding-vertical-15\@tablet {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+  .g--padding-16\@tablet {
+    padding: 160px;
+  }
+  .g--padding-left-16\@tablet {
+    padding-left: 160px;
+  }
+  .g--padding-right-16\@tablet {
+    padding-right: 160px;
+  }
+  .g--padding-top-16\@tablet {
+    padding-top: 160px;
+  }
+  .g--padding-bottom-16\@tablet {
+    padding-bottom: 160px;
+  }
+  .g--padding-horizontal-16\@tablet {
+    padding-right: 160px;
+    padding-left: 160px;
+  }
+  .g--padding-vertical-16\@tablet {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+  .g--padding-17\@tablet {
+    padding: 192px;
+  }
+  .g--padding-left-17\@tablet {
+    padding-left: 192px;
+  }
+  .g--padding-right-17\@tablet {
+    padding-right: 192px;
+  }
+  .g--padding-top-17\@tablet {
+    padding-top: 192px;
+  }
+  .g--padding-bottom-17\@tablet {
+    padding-bottom: 192px;
+  }
+  .g--padding-horizontal-17\@tablet {
+    padding-right: 192px;
+    padding-left: 192px;
+  }
+  .g--padding-vertical-17\@tablet {
+    padding-top: 192px;
+    padding-bottom: 192px;
+  }
+  .g--padding-18\@tablet {
+    padding: 224px;
+  }
+  .g--padding-left-18\@tablet {
+    padding-left: 224px;
+  }
+  .g--padding-right-18\@tablet {
+    padding-right: 224px;
+  }
+  .g--padding-top-18\@tablet {
+    padding-top: 224px;
+  }
+  .g--padding-bottom-18\@tablet {
+    padding-bottom: 224px;
+  }
+  .g--padding-horizontal-18\@tablet {
+    padding-right: 224px;
+    padding-left: 224px;
+  }
+  .g--padding-vertical-18\@tablet {
+    padding-top: 224px;
+    padding-bottom: 224px;
+  }
+  .g--padding-19\@tablet {
+    padding: 256px;
+  }
+  .g--padding-left-19\@tablet {
+    padding-left: 256px;
+  }
+  .g--padding-right-19\@tablet {
+    padding-right: 256px;
+  }
+  .g--padding-top-19\@tablet {
+    padding-top: 256px;
+  }
+  .g--padding-bottom-19\@tablet {
+    padding-bottom: 256px;
+  }
+  .g--padding-horizontal-19\@tablet {
+    padding-right: 256px;
+    padding-left: 256px;
+  }
+  .g--padding-vertical-19\@tablet {
+    padding-top: 256px;
+    padding-bottom: 256px;
+  }
+  .g--padding-20\@tablet {
+    padding: 320px;
+  }
+  .g--padding-left-20\@tablet {
+    padding-left: 320px;
+  }
+  .g--padding-right-20\@tablet {
+    padding-right: 320px;
+  }
+  .g--padding-top-20\@tablet {
+    padding-top: 320px;
+  }
+  .g--padding-bottom-20\@tablet {
+    padding-bottom: 320px;
+  }
+  .g--padding-horizontal-20\@tablet {
+    padding-right: 320px;
+    padding-left: 320px;
+  }
+  .g--padding-vertical-20\@tablet {
+    padding-top: 320px;
+    padding-bottom: 320px;
+  }
+  .g--padding-21\@tablet {
+    padding: 480px;
+  }
+  .g--padding-left-21\@tablet {
+    padding-left: 480px;
+  }
+  .g--padding-right-21\@tablet {
+    padding-right: 480px;
+  }
+  .g--padding-top-21\@tablet {
+    padding-top: 480px;
+  }
+  .g--padding-bottom-21\@tablet {
+    padding-bottom: 480px;
+  }
+  .g--padding-horizontal-21\@tablet {
+    padding-right: 480px;
+    padding-left: 480px;
+  }
+  .g--padding-vertical-21\@tablet {
+    padding-top: 480px;
+    padding-bottom: 480px;
+  }
+  .g--padding-22\@tablet {
+    padding: 640px;
+  }
+  .g--padding-left-22\@tablet {
+    padding-left: 640px;
+  }
+  .g--padding-right-22\@tablet {
+    padding-right: 640px;
+  }
+  .g--padding-top-22\@tablet {
+    padding-top: 640px;
+  }
+  .g--padding-bottom-22\@tablet {
+    padding-bottom: 640px;
+  }
+  .g--padding-horizontal-22\@tablet {
+    padding-right: 640px;
+    padding-left: 640px;
+  }
+  .g--padding-vertical-22\@tablet {
+    padding-top: 640px;
+    padding-bottom: 640px;
+  }
+}
+@media (min-width: 1600px) {
+  .g--padding-0\@desktop {
+    padding: 0px;
+  }
+  .g--padding-left-0\@desktop {
+    padding-left: 0px;
+  }
+  .g--padding-right-0\@desktop {
+    padding-right: 0px;
+  }
+  .g--padding-top-0\@desktop {
+    padding-top: 0px;
+  }
+  .g--padding-bottom-0\@desktop {
+    padding-bottom: 0px;
+  }
+  .g--padding-horizontal-0\@desktop {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .g--padding-vertical-0\@desktop {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .g--padding-1\@desktop {
+    padding: 4px;
+  }
+  .g--padding-left-1\@desktop {
+    padding-left: 4px;
+  }
+  .g--padding-right-1\@desktop {
+    padding-right: 4px;
+  }
+  .g--padding-top-1\@desktop {
+    padding-top: 4px;
+  }
+  .g--padding-bottom-1\@desktop {
+    padding-bottom: 4px;
+  }
+  .g--padding-horizontal-1\@desktop {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+  .g--padding-vertical-1\@desktop {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .g--padding-2\@desktop {
+    padding: 6px;
+  }
+  .g--padding-left-2\@desktop {
+    padding-left: 6px;
+  }
+  .g--padding-right-2\@desktop {
+    padding-right: 6px;
+  }
+  .g--padding-top-2\@desktop {
+    padding-top: 6px;
+  }
+  .g--padding-bottom-2\@desktop {
+    padding-bottom: 6px;
+  }
+  .g--padding-horizontal-2\@desktop {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+  .g--padding-vertical-2\@desktop {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .g--padding-3\@desktop {
+    padding: 8px;
+  }
+  .g--padding-left-3\@desktop {
+    padding-left: 8px;
+  }
+  .g--padding-right-3\@desktop {
+    padding-right: 8px;
+  }
+  .g--padding-top-3\@desktop {
+    padding-top: 8px;
+  }
+  .g--padding-bottom-3\@desktop {
+    padding-bottom: 8px;
+  }
+  .g--padding-horizontal-3\@desktop {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+  .g--padding-vertical-3\@desktop {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .g--padding-4\@desktop {
+    padding: 10px;
+  }
+  .g--padding-left-4\@desktop {
+    padding-left: 10px;
+  }
+  .g--padding-right-4\@desktop {
+    padding-right: 10px;
+  }
+  .g--padding-top-4\@desktop {
+    padding-top: 10px;
+  }
+  .g--padding-bottom-4\@desktop {
+    padding-bottom: 10px;
+  }
+  .g--padding-horizontal-4\@desktop {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .g--padding-vertical-4\@desktop {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .g--padding-5\@desktop {
+    padding: 12px;
+  }
+  .g--padding-left-5\@desktop {
+    padding-left: 12px;
+  }
+  .g--padding-right-5\@desktop {
+    padding-right: 12px;
+  }
+  .g--padding-top-5\@desktop {
+    padding-top: 12px;
+  }
+  .g--padding-bottom-5\@desktop {
+    padding-bottom: 12px;
+  }
+  .g--padding-horizontal-5\@desktop {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  .g--padding-vertical-5\@desktop {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .g--padding-6\@desktop {
+    padding: 16px;
+  }
+  .g--padding-left-6\@desktop {
+    padding-left: 16px;
+  }
+  .g--padding-right-6\@desktop {
+    padding-right: 16px;
+  }
+  .g--padding-top-6\@desktop {
+    padding-top: 16px;
+  }
+  .g--padding-bottom-6\@desktop {
+    padding-bottom: 16px;
+  }
+  .g--padding-horizontal-6\@desktop {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  .g--padding-vertical-6\@desktop {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .g--padding-7\@desktop {
+    padding: 20px;
+  }
+  .g--padding-left-7\@desktop {
+    padding-left: 20px;
+  }
+  .g--padding-right-7\@desktop {
+    padding-right: 20px;
+  }
+  .g--padding-top-7\@desktop {
+    padding-top: 20px;
+  }
+  .g--padding-bottom-7\@desktop {
+    padding-bottom: 20px;
+  }
+  .g--padding-horizontal-7\@desktop {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .g--padding-vertical-7\@desktop {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .g--padding-8\@desktop {
+    padding: 24px;
+  }
+  .g--padding-left-8\@desktop {
+    padding-left: 24px;
+  }
+  .g--padding-right-8\@desktop {
+    padding-right: 24px;
+  }
+  .g--padding-top-8\@desktop {
+    padding-top: 24px;
+  }
+  .g--padding-bottom-8\@desktop {
+    padding-bottom: 24px;
+  }
+  .g--padding-horizontal-8\@desktop {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+  .g--padding-vertical-8\@desktop {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .g--padding-9\@desktop {
+    padding: 32px;
+  }
+  .g--padding-left-9\@desktop {
+    padding-left: 32px;
+  }
+  .g--padding-right-9\@desktop {
+    padding-right: 32px;
+  }
+  .g--padding-top-9\@desktop {
+    padding-top: 32px;
+  }
+  .g--padding-bottom-9\@desktop {
+    padding-bottom: 32px;
+  }
+  .g--padding-horizontal-9\@desktop {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+  .g--padding-vertical-9\@desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .g--padding-10\@desktop {
+    padding: 40px;
+  }
+  .g--padding-left-10\@desktop {
+    padding-left: 40px;
+  }
+  .g--padding-right-10\@desktop {
+    padding-right: 40px;
+  }
+  .g--padding-top-10\@desktop {
+    padding-top: 40px;
+  }
+  .g--padding-bottom-10\@desktop {
+    padding-bottom: 40px;
+  }
+  .g--padding-horizontal-10\@desktop {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  .g--padding-vertical-10\@desktop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .g--padding-11\@desktop {
+    padding: 48px;
+  }
+  .g--padding-left-11\@desktop {
+    padding-left: 48px;
+  }
+  .g--padding-right-11\@desktop {
+    padding-right: 48px;
+  }
+  .g--padding-top-11\@desktop {
+    padding-top: 48px;
+  }
+  .g--padding-bottom-11\@desktop {
+    padding-bottom: 48px;
+  }
+  .g--padding-horizontal-11\@desktop {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+  .g--padding-vertical-11\@desktop {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .g--padding-12\@desktop {
+    padding: 64px;
+  }
+  .g--padding-left-12\@desktop {
+    padding-left: 64px;
+  }
+  .g--padding-right-12\@desktop {
+    padding-right: 64px;
+  }
+  .g--padding-top-12\@desktop {
+    padding-top: 64px;
+  }
+  .g--padding-bottom-12\@desktop {
+    padding-bottom: 64px;
+  }
+  .g--padding-horizontal-12\@desktop {
+    padding-right: 64px;
+    padding-left: 64px;
+  }
+  .g--padding-vertical-12\@desktop {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .g--padding-13\@desktop {
+    padding: 80px;
+  }
+  .g--padding-left-13\@desktop {
+    padding-left: 80px;
+  }
+  .g--padding-right-13\@desktop {
+    padding-right: 80px;
+  }
+  .g--padding-top-13\@desktop {
+    padding-top: 80px;
+  }
+  .g--padding-bottom-13\@desktop {
+    padding-bottom: 80px;
+  }
+  .g--padding-horizontal-13\@desktop {
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+  .g--padding-vertical-13\@desktop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .g--padding-14\@desktop {
+    padding: 96px;
+  }
+  .g--padding-left-14\@desktop {
+    padding-left: 96px;
+  }
+  .g--padding-right-14\@desktop {
+    padding-right: 96px;
+  }
+  .g--padding-top-14\@desktop {
+    padding-top: 96px;
+  }
+  .g--padding-bottom-14\@desktop {
+    padding-bottom: 96px;
+  }
+  .g--padding-horizontal-14\@desktop {
+    padding-right: 96px;
+    padding-left: 96px;
+  }
+  .g--padding-vertical-14\@desktop {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  .g--padding-15\@desktop {
+    padding: 128px;
+  }
+  .g--padding-left-15\@desktop {
+    padding-left: 128px;
+  }
+  .g--padding-right-15\@desktop {
+    padding-right: 128px;
+  }
+  .g--padding-top-15\@desktop {
+    padding-top: 128px;
+  }
+  .g--padding-bottom-15\@desktop {
+    padding-bottom: 128px;
+  }
+  .g--padding-horizontal-15\@desktop {
+    padding-right: 128px;
+    padding-left: 128px;
+  }
+  .g--padding-vertical-15\@desktop {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+  .g--padding-16\@desktop {
+    padding: 160px;
+  }
+  .g--padding-left-16\@desktop {
+    padding-left: 160px;
+  }
+  .g--padding-right-16\@desktop {
+    padding-right: 160px;
+  }
+  .g--padding-top-16\@desktop {
+    padding-top: 160px;
+  }
+  .g--padding-bottom-16\@desktop {
+    padding-bottom: 160px;
+  }
+  .g--padding-horizontal-16\@desktop {
+    padding-right: 160px;
+    padding-left: 160px;
+  }
+  .g--padding-vertical-16\@desktop {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+  .g--padding-17\@desktop {
+    padding: 192px;
+  }
+  .g--padding-left-17\@desktop {
+    padding-left: 192px;
+  }
+  .g--padding-right-17\@desktop {
+    padding-right: 192px;
+  }
+  .g--padding-top-17\@desktop {
+    padding-top: 192px;
+  }
+  .g--padding-bottom-17\@desktop {
+    padding-bottom: 192px;
+  }
+  .g--padding-horizontal-17\@desktop {
+    padding-right: 192px;
+    padding-left: 192px;
+  }
+  .g--padding-vertical-17\@desktop {
+    padding-top: 192px;
+    padding-bottom: 192px;
+  }
+  .g--padding-18\@desktop {
+    padding: 224px;
+  }
+  .g--padding-left-18\@desktop {
+    padding-left: 224px;
+  }
+  .g--padding-right-18\@desktop {
+    padding-right: 224px;
+  }
+  .g--padding-top-18\@desktop {
+    padding-top: 224px;
+  }
+  .g--padding-bottom-18\@desktop {
+    padding-bottom: 224px;
+  }
+  .g--padding-horizontal-18\@desktop {
+    padding-right: 224px;
+    padding-left: 224px;
+  }
+  .g--padding-vertical-18\@desktop {
+    padding-top: 224px;
+    padding-bottom: 224px;
+  }
+  .g--padding-19\@desktop {
+    padding: 256px;
+  }
+  .g--padding-left-19\@desktop {
+    padding-left: 256px;
+  }
+  .g--padding-right-19\@desktop {
+    padding-right: 256px;
+  }
+  .g--padding-top-19\@desktop {
+    padding-top: 256px;
+  }
+  .g--padding-bottom-19\@desktop {
+    padding-bottom: 256px;
+  }
+  .g--padding-horizontal-19\@desktop {
+    padding-right: 256px;
+    padding-left: 256px;
+  }
+  .g--padding-vertical-19\@desktop {
+    padding-top: 256px;
+    padding-bottom: 256px;
+  }
+  .g--padding-20\@desktop {
+    padding: 320px;
+  }
+  .g--padding-left-20\@desktop {
+    padding-left: 320px;
+  }
+  .g--padding-right-20\@desktop {
+    padding-right: 320px;
+  }
+  .g--padding-top-20\@desktop {
+    padding-top: 320px;
+  }
+  .g--padding-bottom-20\@desktop {
+    padding-bottom: 320px;
+  }
+  .g--padding-horizontal-20\@desktop {
+    padding-right: 320px;
+    padding-left: 320px;
+  }
+  .g--padding-vertical-20\@desktop {
+    padding-top: 320px;
+    padding-bottom: 320px;
+  }
+  .g--padding-21\@desktop {
+    padding: 480px;
+  }
+  .g--padding-left-21\@desktop {
+    padding-left: 480px;
+  }
+  .g--padding-right-21\@desktop {
+    padding-right: 480px;
+  }
+  .g--padding-top-21\@desktop {
+    padding-top: 480px;
+  }
+  .g--padding-bottom-21\@desktop {
+    padding-bottom: 480px;
+  }
+  .g--padding-horizontal-21\@desktop {
+    padding-right: 480px;
+    padding-left: 480px;
+  }
+  .g--padding-vertical-21\@desktop {
+    padding-top: 480px;
+    padding-bottom: 480px;
+  }
+  .g--padding-22\@desktop {
+    padding: 640px;
+  }
+  .g--padding-left-22\@desktop {
+    padding-left: 640px;
+  }
+  .g--padding-right-22\@desktop {
+    padding-right: 640px;
+  }
+  .g--padding-top-22\@desktop {
+    padding-top: 640px;
+  }
+  .g--padding-bottom-22\@desktop {
+    padding-bottom: 640px;
+  }
+  .g--padding-horizontal-22\@desktop {
+    padding-right: 640px;
+    padding-left: 640px;
+  }
+  .g--padding-vertical-22\@desktop {
+    padding-top: 640px;
+    padding-bottom: 640px;
+  }
+}
 .g--margin-0 {
   margin: 0px;
 }
@@ -3403,6 +7767,1698 @@ table {
   margin-right: 640px;
 }
 
+.g--margin-23 {
+  margin: auto;
+}
+
+.g--margin-horizontal-23 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.g--margin-vertical-23 {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.g--margin-top-23 {
+  margin-top: auto;
+}
+
+.g--margin-bottom-23 {
+  margin-bottom: auto;
+}
+
+.g--margin-left-23 {
+  margin-left: auto;
+}
+
+.g--margin-right-23 {
+  margin-right: auto;
+}
+
+@media (min-width: 1250px) {
+  .g--margin-0\@mobil {
+    margin: 0px;
+  }
+  .g--margin-horizontal-0\@mobil {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .g--margin-vertical-0\@mobil {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .g--margin-top-0\@mobil {
+    margin-top: 0px;
+  }
+  .g--margin-bottom-0\@mobil {
+    margin-bottom: 0px;
+  }
+  .g--margin-left-0\@mobil {
+    margin-left: 0px;
+  }
+  .g--margin-right-0\@mobil {
+    margin-right: 0px;
+  }
+  .g--margin-1\@mobil {
+    margin: 4px;
+  }
+  .g--margin-horizontal-1\@mobil {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .g--margin-vertical-1\@mobil {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .g--margin-top-1\@mobil {
+    margin-top: 4px;
+  }
+  .g--margin-bottom-1\@mobil {
+    margin-bottom: 4px;
+  }
+  .g--margin-left-1\@mobil {
+    margin-left: 4px;
+  }
+  .g--margin-right-1\@mobil {
+    margin-right: 4px;
+  }
+  .g--margin-2\@mobil {
+    margin: 6px;
+  }
+  .g--margin-horizontal-2\@mobil {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .g--margin-vertical-2\@mobil {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  .g--margin-top-2\@mobil {
+    margin-top: 6px;
+  }
+  .g--margin-bottom-2\@mobil {
+    margin-bottom: 6px;
+  }
+  .g--margin-left-2\@mobil {
+    margin-left: 6px;
+  }
+  .g--margin-right-2\@mobil {
+    margin-right: 6px;
+  }
+  .g--margin-3\@mobil {
+    margin: 8px;
+  }
+  .g--margin-horizontal-3\@mobil {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .g--margin-vertical-3\@mobil {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .g--margin-top-3\@mobil {
+    margin-top: 8px;
+  }
+  .g--margin-bottom-3\@mobil {
+    margin-bottom: 8px;
+  }
+  .g--margin-left-3\@mobil {
+    margin-left: 8px;
+  }
+  .g--margin-right-3\@mobil {
+    margin-right: 8px;
+  }
+  .g--margin-4\@mobil {
+    margin: 10px;
+  }
+  .g--margin-horizontal-4\@mobil {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .g--margin-vertical-4\@mobil {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .g--margin-top-4\@mobil {
+    margin-top: 10px;
+  }
+  .g--margin-bottom-4\@mobil {
+    margin-bottom: 10px;
+  }
+  .g--margin-left-4\@mobil {
+    margin-left: 10px;
+  }
+  .g--margin-right-4\@mobil {
+    margin-right: 10px;
+  }
+  .g--margin-5\@mobil {
+    margin: 12px;
+  }
+  .g--margin-horizontal-5\@mobil {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .g--margin-vertical-5\@mobil {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .g--margin-top-5\@mobil {
+    margin-top: 12px;
+  }
+  .g--margin-bottom-5\@mobil {
+    margin-bottom: 12px;
+  }
+  .g--margin-left-5\@mobil {
+    margin-left: 12px;
+  }
+  .g--margin-right-5\@mobil {
+    margin-right: 12px;
+  }
+  .g--margin-6\@mobil {
+    margin: 16px;
+  }
+  .g--margin-horizontal-6\@mobil {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .g--margin-vertical-6\@mobil {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .g--margin-top-6\@mobil {
+    margin-top: 16px;
+  }
+  .g--margin-bottom-6\@mobil {
+    margin-bottom: 16px;
+  }
+  .g--margin-left-6\@mobil {
+    margin-left: 16px;
+  }
+  .g--margin-right-6\@mobil {
+    margin-right: 16px;
+  }
+  .g--margin-7\@mobil {
+    margin: 20px;
+  }
+  .g--margin-horizontal-7\@mobil {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .g--margin-vertical-7\@mobil {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .g--margin-top-7\@mobil {
+    margin-top: 20px;
+  }
+  .g--margin-bottom-7\@mobil {
+    margin-bottom: 20px;
+  }
+  .g--margin-left-7\@mobil {
+    margin-left: 20px;
+  }
+  .g--margin-right-7\@mobil {
+    margin-right: 20px;
+  }
+  .g--margin-8\@mobil {
+    margin: 24px;
+  }
+  .g--margin-horizontal-8\@mobil {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .g--margin-vertical-8\@mobil {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .g--margin-top-8\@mobil {
+    margin-top: 24px;
+  }
+  .g--margin-bottom-8\@mobil {
+    margin-bottom: 24px;
+  }
+  .g--margin-left-8\@mobil {
+    margin-left: 24px;
+  }
+  .g--margin-right-8\@mobil {
+    margin-right: 24px;
+  }
+  .g--margin-9\@mobil {
+    margin: 32px;
+  }
+  .g--margin-horizontal-9\@mobil {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .g--margin-vertical-9\@mobil {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .g--margin-top-9\@mobil {
+    margin-top: 32px;
+  }
+  .g--margin-bottom-9\@mobil {
+    margin-bottom: 32px;
+  }
+  .g--margin-left-9\@mobil {
+    margin-left: 32px;
+  }
+  .g--margin-right-9\@mobil {
+    margin-right: 32px;
+  }
+  .g--margin-10\@mobil {
+    margin: 40px;
+  }
+  .g--margin-horizontal-10\@mobil {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .g--margin-vertical-10\@mobil {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .g--margin-top-10\@mobil {
+    margin-top: 40px;
+  }
+  .g--margin-bottom-10\@mobil {
+    margin-bottom: 40px;
+  }
+  .g--margin-left-10\@mobil {
+    margin-left: 40px;
+  }
+  .g--margin-right-10\@mobil {
+    margin-right: 40px;
+  }
+  .g--margin-11\@mobil {
+    margin: 48px;
+  }
+  .g--margin-horizontal-11\@mobil {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  .g--margin-vertical-11\@mobil {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+  .g--margin-top-11\@mobil {
+    margin-top: 48px;
+  }
+  .g--margin-bottom-11\@mobil {
+    margin-bottom: 48px;
+  }
+  .g--margin-left-11\@mobil {
+    margin-left: 48px;
+  }
+  .g--margin-right-11\@mobil {
+    margin-right: 48px;
+  }
+  .g--margin-12\@mobil {
+    margin: 64px;
+  }
+  .g--margin-horizontal-12\@mobil {
+    margin-left: 64px;
+    margin-right: 64px;
+  }
+  .g--margin-vertical-12\@mobil {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+  .g--margin-top-12\@mobil {
+    margin-top: 64px;
+  }
+  .g--margin-bottom-12\@mobil {
+    margin-bottom: 64px;
+  }
+  .g--margin-left-12\@mobil {
+    margin-left: 64px;
+  }
+  .g--margin-right-12\@mobil {
+    margin-right: 64px;
+  }
+  .g--margin-13\@mobil {
+    margin: 80px;
+  }
+  .g--margin-horizontal-13\@mobil {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .g--margin-vertical-13\@mobil {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .g--margin-top-13\@mobil {
+    margin-top: 80px;
+  }
+  .g--margin-bottom-13\@mobil {
+    margin-bottom: 80px;
+  }
+  .g--margin-left-13\@mobil {
+    margin-left: 80px;
+  }
+  .g--margin-right-13\@mobil {
+    margin-right: 80px;
+  }
+  .g--margin-14\@mobil {
+    margin: 96px;
+  }
+  .g--margin-horizontal-14\@mobil {
+    margin-left: 96px;
+    margin-right: 96px;
+  }
+  .g--margin-vertical-14\@mobil {
+    margin-top: 96px;
+    margin-bottom: 96px;
+  }
+  .g--margin-top-14\@mobil {
+    margin-top: 96px;
+  }
+  .g--margin-bottom-14\@mobil {
+    margin-bottom: 96px;
+  }
+  .g--margin-left-14\@mobil {
+    margin-left: 96px;
+  }
+  .g--margin-right-14\@mobil {
+    margin-right: 96px;
+  }
+  .g--margin-15\@mobil {
+    margin: 128px;
+  }
+  .g--margin-horizontal-15\@mobil {
+    margin-left: 128px;
+    margin-right: 128px;
+  }
+  .g--margin-vertical-15\@mobil {
+    margin-top: 128px;
+    margin-bottom: 128px;
+  }
+  .g--margin-top-15\@mobil {
+    margin-top: 128px;
+  }
+  .g--margin-bottom-15\@mobil {
+    margin-bottom: 128px;
+  }
+  .g--margin-left-15\@mobil {
+    margin-left: 128px;
+  }
+  .g--margin-right-15\@mobil {
+    margin-right: 128px;
+  }
+  .g--margin-16\@mobil {
+    margin: 160px;
+  }
+  .g--margin-horizontal-16\@mobil {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+  .g--margin-vertical-16\@mobil {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
+  .g--margin-top-16\@mobil {
+    margin-top: 160px;
+  }
+  .g--margin-bottom-16\@mobil {
+    margin-bottom: 160px;
+  }
+  .g--margin-left-16\@mobil {
+    margin-left: 160px;
+  }
+  .g--margin-right-16\@mobil {
+    margin-right: 160px;
+  }
+  .g--margin-17\@mobil {
+    margin: 192px;
+  }
+  .g--margin-horizontal-17\@mobil {
+    margin-left: 192px;
+    margin-right: 192px;
+  }
+  .g--margin-vertical-17\@mobil {
+    margin-top: 192px;
+    margin-bottom: 192px;
+  }
+  .g--margin-top-17\@mobil {
+    margin-top: 192px;
+  }
+  .g--margin-bottom-17\@mobil {
+    margin-bottom: 192px;
+  }
+  .g--margin-left-17\@mobil {
+    margin-left: 192px;
+  }
+  .g--margin-right-17\@mobil {
+    margin-right: 192px;
+  }
+  .g--margin-18\@mobil {
+    margin: 224px;
+  }
+  .g--margin-horizontal-18\@mobil {
+    margin-left: 224px;
+    margin-right: 224px;
+  }
+  .g--margin-vertical-18\@mobil {
+    margin-top: 224px;
+    margin-bottom: 224px;
+  }
+  .g--margin-top-18\@mobil {
+    margin-top: 224px;
+  }
+  .g--margin-bottom-18\@mobil {
+    margin-bottom: 224px;
+  }
+  .g--margin-left-18\@mobil {
+    margin-left: 224px;
+  }
+  .g--margin-right-18\@mobil {
+    margin-right: 224px;
+  }
+  .g--margin-19\@mobil {
+    margin: 256px;
+  }
+  .g--margin-horizontal-19\@mobil {
+    margin-left: 256px;
+    margin-right: 256px;
+  }
+  .g--margin-vertical-19\@mobil {
+    margin-top: 256px;
+    margin-bottom: 256px;
+  }
+  .g--margin-top-19\@mobil {
+    margin-top: 256px;
+  }
+  .g--margin-bottom-19\@mobil {
+    margin-bottom: 256px;
+  }
+  .g--margin-left-19\@mobil {
+    margin-left: 256px;
+  }
+  .g--margin-right-19\@mobil {
+    margin-right: 256px;
+  }
+  .g--margin-20\@mobil {
+    margin: 320px;
+  }
+  .g--margin-horizontal-20\@mobil {
+    margin-left: 320px;
+    margin-right: 320px;
+  }
+  .g--margin-vertical-20\@mobil {
+    margin-top: 320px;
+    margin-bottom: 320px;
+  }
+  .g--margin-top-20\@mobil {
+    margin-top: 320px;
+  }
+  .g--margin-bottom-20\@mobil {
+    margin-bottom: 320px;
+  }
+  .g--margin-left-20\@mobil {
+    margin-left: 320px;
+  }
+  .g--margin-right-20\@mobil {
+    margin-right: 320px;
+  }
+  .g--margin-21\@mobil {
+    margin: 480px;
+  }
+  .g--margin-horizontal-21\@mobil {
+    margin-left: 480px;
+    margin-right: 480px;
+  }
+  .g--margin-vertical-21\@mobil {
+    margin-top: 480px;
+    margin-bottom: 480px;
+  }
+  .g--margin-top-21\@mobil {
+    margin-top: 480px;
+  }
+  .g--margin-bottom-21\@mobil {
+    margin-bottom: 480px;
+  }
+  .g--margin-left-21\@mobil {
+    margin-left: 480px;
+  }
+  .g--margin-right-21\@mobil {
+    margin-right: 480px;
+  }
+  .g--margin-22\@mobil {
+    margin: 640px;
+  }
+  .g--margin-horizontal-22\@mobil {
+    margin-left: 640px;
+    margin-right: 640px;
+  }
+  .g--margin-vertical-22\@mobil {
+    margin-top: 640px;
+    margin-bottom: 640px;
+  }
+  .g--margin-top-22\@mobil {
+    margin-top: 640px;
+  }
+  .g--margin-bottom-22\@mobil {
+    margin-bottom: 640px;
+  }
+  .g--margin-left-22\@mobil {
+    margin-left: 640px;
+  }
+  .g--margin-right-22\@mobil {
+    margin-right: 640px;
+  }
+  .g--margin-23\@mobil {
+    margin: auto;
+  }
+  .g--margin-horizontal-23\@mobil {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .g--margin-vertical-23\@mobil {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .g--margin-top-23\@mobil {
+    margin-top: auto;
+  }
+  .g--margin-bottom-23\@mobil {
+    margin-bottom: auto;
+  }
+  .g--margin-left-23\@mobil {
+    margin-left: auto;
+  }
+  .g--margin-right-23\@mobil {
+    margin-right: auto;
+  }
+}
+@media (min-width: 1500px) {
+  .g--margin-0\@tablet {
+    margin: 0px;
+  }
+  .g--margin-horizontal-0\@tablet {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .g--margin-vertical-0\@tablet {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .g--margin-top-0\@tablet {
+    margin-top: 0px;
+  }
+  .g--margin-bottom-0\@tablet {
+    margin-bottom: 0px;
+  }
+  .g--margin-left-0\@tablet {
+    margin-left: 0px;
+  }
+  .g--margin-right-0\@tablet {
+    margin-right: 0px;
+  }
+  .g--margin-1\@tablet {
+    margin: 4px;
+  }
+  .g--margin-horizontal-1\@tablet {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .g--margin-vertical-1\@tablet {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .g--margin-top-1\@tablet {
+    margin-top: 4px;
+  }
+  .g--margin-bottom-1\@tablet {
+    margin-bottom: 4px;
+  }
+  .g--margin-left-1\@tablet {
+    margin-left: 4px;
+  }
+  .g--margin-right-1\@tablet {
+    margin-right: 4px;
+  }
+  .g--margin-2\@tablet {
+    margin: 6px;
+  }
+  .g--margin-horizontal-2\@tablet {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .g--margin-vertical-2\@tablet {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  .g--margin-top-2\@tablet {
+    margin-top: 6px;
+  }
+  .g--margin-bottom-2\@tablet {
+    margin-bottom: 6px;
+  }
+  .g--margin-left-2\@tablet {
+    margin-left: 6px;
+  }
+  .g--margin-right-2\@tablet {
+    margin-right: 6px;
+  }
+  .g--margin-3\@tablet {
+    margin: 8px;
+  }
+  .g--margin-horizontal-3\@tablet {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .g--margin-vertical-3\@tablet {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .g--margin-top-3\@tablet {
+    margin-top: 8px;
+  }
+  .g--margin-bottom-3\@tablet {
+    margin-bottom: 8px;
+  }
+  .g--margin-left-3\@tablet {
+    margin-left: 8px;
+  }
+  .g--margin-right-3\@tablet {
+    margin-right: 8px;
+  }
+  .g--margin-4\@tablet {
+    margin: 10px;
+  }
+  .g--margin-horizontal-4\@tablet {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .g--margin-vertical-4\@tablet {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .g--margin-top-4\@tablet {
+    margin-top: 10px;
+  }
+  .g--margin-bottom-4\@tablet {
+    margin-bottom: 10px;
+  }
+  .g--margin-left-4\@tablet {
+    margin-left: 10px;
+  }
+  .g--margin-right-4\@tablet {
+    margin-right: 10px;
+  }
+  .g--margin-5\@tablet {
+    margin: 12px;
+  }
+  .g--margin-horizontal-5\@tablet {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .g--margin-vertical-5\@tablet {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .g--margin-top-5\@tablet {
+    margin-top: 12px;
+  }
+  .g--margin-bottom-5\@tablet {
+    margin-bottom: 12px;
+  }
+  .g--margin-left-5\@tablet {
+    margin-left: 12px;
+  }
+  .g--margin-right-5\@tablet {
+    margin-right: 12px;
+  }
+  .g--margin-6\@tablet {
+    margin: 16px;
+  }
+  .g--margin-horizontal-6\@tablet {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .g--margin-vertical-6\@tablet {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .g--margin-top-6\@tablet {
+    margin-top: 16px;
+  }
+  .g--margin-bottom-6\@tablet {
+    margin-bottom: 16px;
+  }
+  .g--margin-left-6\@tablet {
+    margin-left: 16px;
+  }
+  .g--margin-right-6\@tablet {
+    margin-right: 16px;
+  }
+  .g--margin-7\@tablet {
+    margin: 20px;
+  }
+  .g--margin-horizontal-7\@tablet {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .g--margin-vertical-7\@tablet {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .g--margin-top-7\@tablet {
+    margin-top: 20px;
+  }
+  .g--margin-bottom-7\@tablet {
+    margin-bottom: 20px;
+  }
+  .g--margin-left-7\@tablet {
+    margin-left: 20px;
+  }
+  .g--margin-right-7\@tablet {
+    margin-right: 20px;
+  }
+  .g--margin-8\@tablet {
+    margin: 24px;
+  }
+  .g--margin-horizontal-8\@tablet {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .g--margin-vertical-8\@tablet {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .g--margin-top-8\@tablet {
+    margin-top: 24px;
+  }
+  .g--margin-bottom-8\@tablet {
+    margin-bottom: 24px;
+  }
+  .g--margin-left-8\@tablet {
+    margin-left: 24px;
+  }
+  .g--margin-right-8\@tablet {
+    margin-right: 24px;
+  }
+  .g--margin-9\@tablet {
+    margin: 32px;
+  }
+  .g--margin-horizontal-9\@tablet {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .g--margin-vertical-9\@tablet {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .g--margin-top-9\@tablet {
+    margin-top: 32px;
+  }
+  .g--margin-bottom-9\@tablet {
+    margin-bottom: 32px;
+  }
+  .g--margin-left-9\@tablet {
+    margin-left: 32px;
+  }
+  .g--margin-right-9\@tablet {
+    margin-right: 32px;
+  }
+  .g--margin-10\@tablet {
+    margin: 40px;
+  }
+  .g--margin-horizontal-10\@tablet {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .g--margin-vertical-10\@tablet {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .g--margin-top-10\@tablet {
+    margin-top: 40px;
+  }
+  .g--margin-bottom-10\@tablet {
+    margin-bottom: 40px;
+  }
+  .g--margin-left-10\@tablet {
+    margin-left: 40px;
+  }
+  .g--margin-right-10\@tablet {
+    margin-right: 40px;
+  }
+  .g--margin-11\@tablet {
+    margin: 48px;
+  }
+  .g--margin-horizontal-11\@tablet {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  .g--margin-vertical-11\@tablet {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+  .g--margin-top-11\@tablet {
+    margin-top: 48px;
+  }
+  .g--margin-bottom-11\@tablet {
+    margin-bottom: 48px;
+  }
+  .g--margin-left-11\@tablet {
+    margin-left: 48px;
+  }
+  .g--margin-right-11\@tablet {
+    margin-right: 48px;
+  }
+  .g--margin-12\@tablet {
+    margin: 64px;
+  }
+  .g--margin-horizontal-12\@tablet {
+    margin-left: 64px;
+    margin-right: 64px;
+  }
+  .g--margin-vertical-12\@tablet {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+  .g--margin-top-12\@tablet {
+    margin-top: 64px;
+  }
+  .g--margin-bottom-12\@tablet {
+    margin-bottom: 64px;
+  }
+  .g--margin-left-12\@tablet {
+    margin-left: 64px;
+  }
+  .g--margin-right-12\@tablet {
+    margin-right: 64px;
+  }
+  .g--margin-13\@tablet {
+    margin: 80px;
+  }
+  .g--margin-horizontal-13\@tablet {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .g--margin-vertical-13\@tablet {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .g--margin-top-13\@tablet {
+    margin-top: 80px;
+  }
+  .g--margin-bottom-13\@tablet {
+    margin-bottom: 80px;
+  }
+  .g--margin-left-13\@tablet {
+    margin-left: 80px;
+  }
+  .g--margin-right-13\@tablet {
+    margin-right: 80px;
+  }
+  .g--margin-14\@tablet {
+    margin: 96px;
+  }
+  .g--margin-horizontal-14\@tablet {
+    margin-left: 96px;
+    margin-right: 96px;
+  }
+  .g--margin-vertical-14\@tablet {
+    margin-top: 96px;
+    margin-bottom: 96px;
+  }
+  .g--margin-top-14\@tablet {
+    margin-top: 96px;
+  }
+  .g--margin-bottom-14\@tablet {
+    margin-bottom: 96px;
+  }
+  .g--margin-left-14\@tablet {
+    margin-left: 96px;
+  }
+  .g--margin-right-14\@tablet {
+    margin-right: 96px;
+  }
+  .g--margin-15\@tablet {
+    margin: 128px;
+  }
+  .g--margin-horizontal-15\@tablet {
+    margin-left: 128px;
+    margin-right: 128px;
+  }
+  .g--margin-vertical-15\@tablet {
+    margin-top: 128px;
+    margin-bottom: 128px;
+  }
+  .g--margin-top-15\@tablet {
+    margin-top: 128px;
+  }
+  .g--margin-bottom-15\@tablet {
+    margin-bottom: 128px;
+  }
+  .g--margin-left-15\@tablet {
+    margin-left: 128px;
+  }
+  .g--margin-right-15\@tablet {
+    margin-right: 128px;
+  }
+  .g--margin-16\@tablet {
+    margin: 160px;
+  }
+  .g--margin-horizontal-16\@tablet {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+  .g--margin-vertical-16\@tablet {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
+  .g--margin-top-16\@tablet {
+    margin-top: 160px;
+  }
+  .g--margin-bottom-16\@tablet {
+    margin-bottom: 160px;
+  }
+  .g--margin-left-16\@tablet {
+    margin-left: 160px;
+  }
+  .g--margin-right-16\@tablet {
+    margin-right: 160px;
+  }
+  .g--margin-17\@tablet {
+    margin: 192px;
+  }
+  .g--margin-horizontal-17\@tablet {
+    margin-left: 192px;
+    margin-right: 192px;
+  }
+  .g--margin-vertical-17\@tablet {
+    margin-top: 192px;
+    margin-bottom: 192px;
+  }
+  .g--margin-top-17\@tablet {
+    margin-top: 192px;
+  }
+  .g--margin-bottom-17\@tablet {
+    margin-bottom: 192px;
+  }
+  .g--margin-left-17\@tablet {
+    margin-left: 192px;
+  }
+  .g--margin-right-17\@tablet {
+    margin-right: 192px;
+  }
+  .g--margin-18\@tablet {
+    margin: 224px;
+  }
+  .g--margin-horizontal-18\@tablet {
+    margin-left: 224px;
+    margin-right: 224px;
+  }
+  .g--margin-vertical-18\@tablet {
+    margin-top: 224px;
+    margin-bottom: 224px;
+  }
+  .g--margin-top-18\@tablet {
+    margin-top: 224px;
+  }
+  .g--margin-bottom-18\@tablet {
+    margin-bottom: 224px;
+  }
+  .g--margin-left-18\@tablet {
+    margin-left: 224px;
+  }
+  .g--margin-right-18\@tablet {
+    margin-right: 224px;
+  }
+  .g--margin-19\@tablet {
+    margin: 256px;
+  }
+  .g--margin-horizontal-19\@tablet {
+    margin-left: 256px;
+    margin-right: 256px;
+  }
+  .g--margin-vertical-19\@tablet {
+    margin-top: 256px;
+    margin-bottom: 256px;
+  }
+  .g--margin-top-19\@tablet {
+    margin-top: 256px;
+  }
+  .g--margin-bottom-19\@tablet {
+    margin-bottom: 256px;
+  }
+  .g--margin-left-19\@tablet {
+    margin-left: 256px;
+  }
+  .g--margin-right-19\@tablet {
+    margin-right: 256px;
+  }
+  .g--margin-20\@tablet {
+    margin: 320px;
+  }
+  .g--margin-horizontal-20\@tablet {
+    margin-left: 320px;
+    margin-right: 320px;
+  }
+  .g--margin-vertical-20\@tablet {
+    margin-top: 320px;
+    margin-bottom: 320px;
+  }
+  .g--margin-top-20\@tablet {
+    margin-top: 320px;
+  }
+  .g--margin-bottom-20\@tablet {
+    margin-bottom: 320px;
+  }
+  .g--margin-left-20\@tablet {
+    margin-left: 320px;
+  }
+  .g--margin-right-20\@tablet {
+    margin-right: 320px;
+  }
+  .g--margin-21\@tablet {
+    margin: 480px;
+  }
+  .g--margin-horizontal-21\@tablet {
+    margin-left: 480px;
+    margin-right: 480px;
+  }
+  .g--margin-vertical-21\@tablet {
+    margin-top: 480px;
+    margin-bottom: 480px;
+  }
+  .g--margin-top-21\@tablet {
+    margin-top: 480px;
+  }
+  .g--margin-bottom-21\@tablet {
+    margin-bottom: 480px;
+  }
+  .g--margin-left-21\@tablet {
+    margin-left: 480px;
+  }
+  .g--margin-right-21\@tablet {
+    margin-right: 480px;
+  }
+  .g--margin-22\@tablet {
+    margin: 640px;
+  }
+  .g--margin-horizontal-22\@tablet {
+    margin-left: 640px;
+    margin-right: 640px;
+  }
+  .g--margin-vertical-22\@tablet {
+    margin-top: 640px;
+    margin-bottom: 640px;
+  }
+  .g--margin-top-22\@tablet {
+    margin-top: 640px;
+  }
+  .g--margin-bottom-22\@tablet {
+    margin-bottom: 640px;
+  }
+  .g--margin-left-22\@tablet {
+    margin-left: 640px;
+  }
+  .g--margin-right-22\@tablet {
+    margin-right: 640px;
+  }
+  .g--margin-23\@tablet {
+    margin: auto;
+  }
+  .g--margin-horizontal-23\@tablet {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .g--margin-vertical-23\@tablet {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .g--margin-top-23\@tablet {
+    margin-top: auto;
+  }
+  .g--margin-bottom-23\@tablet {
+    margin-bottom: auto;
+  }
+  .g--margin-left-23\@tablet {
+    margin-left: auto;
+  }
+  .g--margin-right-23\@tablet {
+    margin-right: auto;
+  }
+}
+@media (min-width: 1600px) {
+  .g--margin-0\@desktop {
+    margin: 0px;
+  }
+  .g--margin-horizontal-0\@desktop {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .g--margin-vertical-0\@desktop {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .g--margin-top-0\@desktop {
+    margin-top: 0px;
+  }
+  .g--margin-bottom-0\@desktop {
+    margin-bottom: 0px;
+  }
+  .g--margin-left-0\@desktop {
+    margin-left: 0px;
+  }
+  .g--margin-right-0\@desktop {
+    margin-right: 0px;
+  }
+  .g--margin-1\@desktop {
+    margin: 4px;
+  }
+  .g--margin-horizontal-1\@desktop {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .g--margin-vertical-1\@desktop {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .g--margin-top-1\@desktop {
+    margin-top: 4px;
+  }
+  .g--margin-bottom-1\@desktop {
+    margin-bottom: 4px;
+  }
+  .g--margin-left-1\@desktop {
+    margin-left: 4px;
+  }
+  .g--margin-right-1\@desktop {
+    margin-right: 4px;
+  }
+  .g--margin-2\@desktop {
+    margin: 6px;
+  }
+  .g--margin-horizontal-2\@desktop {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .g--margin-vertical-2\@desktop {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  .g--margin-top-2\@desktop {
+    margin-top: 6px;
+  }
+  .g--margin-bottom-2\@desktop {
+    margin-bottom: 6px;
+  }
+  .g--margin-left-2\@desktop {
+    margin-left: 6px;
+  }
+  .g--margin-right-2\@desktop {
+    margin-right: 6px;
+  }
+  .g--margin-3\@desktop {
+    margin: 8px;
+  }
+  .g--margin-horizontal-3\@desktop {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .g--margin-vertical-3\@desktop {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .g--margin-top-3\@desktop {
+    margin-top: 8px;
+  }
+  .g--margin-bottom-3\@desktop {
+    margin-bottom: 8px;
+  }
+  .g--margin-left-3\@desktop {
+    margin-left: 8px;
+  }
+  .g--margin-right-3\@desktop {
+    margin-right: 8px;
+  }
+  .g--margin-4\@desktop {
+    margin: 10px;
+  }
+  .g--margin-horizontal-4\@desktop {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .g--margin-vertical-4\@desktop {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .g--margin-top-4\@desktop {
+    margin-top: 10px;
+  }
+  .g--margin-bottom-4\@desktop {
+    margin-bottom: 10px;
+  }
+  .g--margin-left-4\@desktop {
+    margin-left: 10px;
+  }
+  .g--margin-right-4\@desktop {
+    margin-right: 10px;
+  }
+  .g--margin-5\@desktop {
+    margin: 12px;
+  }
+  .g--margin-horizontal-5\@desktop {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .g--margin-vertical-5\@desktop {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  .g--margin-top-5\@desktop {
+    margin-top: 12px;
+  }
+  .g--margin-bottom-5\@desktop {
+    margin-bottom: 12px;
+  }
+  .g--margin-left-5\@desktop {
+    margin-left: 12px;
+  }
+  .g--margin-right-5\@desktop {
+    margin-right: 12px;
+  }
+  .g--margin-6\@desktop {
+    margin: 16px;
+  }
+  .g--margin-horizontal-6\@desktop {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .g--margin-vertical-6\@desktop {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .g--margin-top-6\@desktop {
+    margin-top: 16px;
+  }
+  .g--margin-bottom-6\@desktop {
+    margin-bottom: 16px;
+  }
+  .g--margin-left-6\@desktop {
+    margin-left: 16px;
+  }
+  .g--margin-right-6\@desktop {
+    margin-right: 16px;
+  }
+  .g--margin-7\@desktop {
+    margin: 20px;
+  }
+  .g--margin-horizontal-7\@desktop {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .g--margin-vertical-7\@desktop {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .g--margin-top-7\@desktop {
+    margin-top: 20px;
+  }
+  .g--margin-bottom-7\@desktop {
+    margin-bottom: 20px;
+  }
+  .g--margin-left-7\@desktop {
+    margin-left: 20px;
+  }
+  .g--margin-right-7\@desktop {
+    margin-right: 20px;
+  }
+  .g--margin-8\@desktop {
+    margin: 24px;
+  }
+  .g--margin-horizontal-8\@desktop {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .g--margin-vertical-8\@desktop {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .g--margin-top-8\@desktop {
+    margin-top: 24px;
+  }
+  .g--margin-bottom-8\@desktop {
+    margin-bottom: 24px;
+  }
+  .g--margin-left-8\@desktop {
+    margin-left: 24px;
+  }
+  .g--margin-right-8\@desktop {
+    margin-right: 24px;
+  }
+  .g--margin-9\@desktop {
+    margin: 32px;
+  }
+  .g--margin-horizontal-9\@desktop {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .g--margin-vertical-9\@desktop {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .g--margin-top-9\@desktop {
+    margin-top: 32px;
+  }
+  .g--margin-bottom-9\@desktop {
+    margin-bottom: 32px;
+  }
+  .g--margin-left-9\@desktop {
+    margin-left: 32px;
+  }
+  .g--margin-right-9\@desktop {
+    margin-right: 32px;
+  }
+  .g--margin-10\@desktop {
+    margin: 40px;
+  }
+  .g--margin-horizontal-10\@desktop {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .g--margin-vertical-10\@desktop {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .g--margin-top-10\@desktop {
+    margin-top: 40px;
+  }
+  .g--margin-bottom-10\@desktop {
+    margin-bottom: 40px;
+  }
+  .g--margin-left-10\@desktop {
+    margin-left: 40px;
+  }
+  .g--margin-right-10\@desktop {
+    margin-right: 40px;
+  }
+  .g--margin-11\@desktop {
+    margin: 48px;
+  }
+  .g--margin-horizontal-11\@desktop {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+  .g--margin-vertical-11\@desktop {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+  .g--margin-top-11\@desktop {
+    margin-top: 48px;
+  }
+  .g--margin-bottom-11\@desktop {
+    margin-bottom: 48px;
+  }
+  .g--margin-left-11\@desktop {
+    margin-left: 48px;
+  }
+  .g--margin-right-11\@desktop {
+    margin-right: 48px;
+  }
+  .g--margin-12\@desktop {
+    margin: 64px;
+  }
+  .g--margin-horizontal-12\@desktop {
+    margin-left: 64px;
+    margin-right: 64px;
+  }
+  .g--margin-vertical-12\@desktop {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+  .g--margin-top-12\@desktop {
+    margin-top: 64px;
+  }
+  .g--margin-bottom-12\@desktop {
+    margin-bottom: 64px;
+  }
+  .g--margin-left-12\@desktop {
+    margin-left: 64px;
+  }
+  .g--margin-right-12\@desktop {
+    margin-right: 64px;
+  }
+  .g--margin-13\@desktop {
+    margin: 80px;
+  }
+  .g--margin-horizontal-13\@desktop {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .g--margin-vertical-13\@desktop {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .g--margin-top-13\@desktop {
+    margin-top: 80px;
+  }
+  .g--margin-bottom-13\@desktop {
+    margin-bottom: 80px;
+  }
+  .g--margin-left-13\@desktop {
+    margin-left: 80px;
+  }
+  .g--margin-right-13\@desktop {
+    margin-right: 80px;
+  }
+  .g--margin-14\@desktop {
+    margin: 96px;
+  }
+  .g--margin-horizontal-14\@desktop {
+    margin-left: 96px;
+    margin-right: 96px;
+  }
+  .g--margin-vertical-14\@desktop {
+    margin-top: 96px;
+    margin-bottom: 96px;
+  }
+  .g--margin-top-14\@desktop {
+    margin-top: 96px;
+  }
+  .g--margin-bottom-14\@desktop {
+    margin-bottom: 96px;
+  }
+  .g--margin-left-14\@desktop {
+    margin-left: 96px;
+  }
+  .g--margin-right-14\@desktop {
+    margin-right: 96px;
+  }
+  .g--margin-15\@desktop {
+    margin: 128px;
+  }
+  .g--margin-horizontal-15\@desktop {
+    margin-left: 128px;
+    margin-right: 128px;
+  }
+  .g--margin-vertical-15\@desktop {
+    margin-top: 128px;
+    margin-bottom: 128px;
+  }
+  .g--margin-top-15\@desktop {
+    margin-top: 128px;
+  }
+  .g--margin-bottom-15\@desktop {
+    margin-bottom: 128px;
+  }
+  .g--margin-left-15\@desktop {
+    margin-left: 128px;
+  }
+  .g--margin-right-15\@desktop {
+    margin-right: 128px;
+  }
+  .g--margin-16\@desktop {
+    margin: 160px;
+  }
+  .g--margin-horizontal-16\@desktop {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+  .g--margin-vertical-16\@desktop {
+    margin-top: 160px;
+    margin-bottom: 160px;
+  }
+  .g--margin-top-16\@desktop {
+    margin-top: 160px;
+  }
+  .g--margin-bottom-16\@desktop {
+    margin-bottom: 160px;
+  }
+  .g--margin-left-16\@desktop {
+    margin-left: 160px;
+  }
+  .g--margin-right-16\@desktop {
+    margin-right: 160px;
+  }
+  .g--margin-17\@desktop {
+    margin: 192px;
+  }
+  .g--margin-horizontal-17\@desktop {
+    margin-left: 192px;
+    margin-right: 192px;
+  }
+  .g--margin-vertical-17\@desktop {
+    margin-top: 192px;
+    margin-bottom: 192px;
+  }
+  .g--margin-top-17\@desktop {
+    margin-top: 192px;
+  }
+  .g--margin-bottom-17\@desktop {
+    margin-bottom: 192px;
+  }
+  .g--margin-left-17\@desktop {
+    margin-left: 192px;
+  }
+  .g--margin-right-17\@desktop {
+    margin-right: 192px;
+  }
+  .g--margin-18\@desktop {
+    margin: 224px;
+  }
+  .g--margin-horizontal-18\@desktop {
+    margin-left: 224px;
+    margin-right: 224px;
+  }
+  .g--margin-vertical-18\@desktop {
+    margin-top: 224px;
+    margin-bottom: 224px;
+  }
+  .g--margin-top-18\@desktop {
+    margin-top: 224px;
+  }
+  .g--margin-bottom-18\@desktop {
+    margin-bottom: 224px;
+  }
+  .g--margin-left-18\@desktop {
+    margin-left: 224px;
+  }
+  .g--margin-right-18\@desktop {
+    margin-right: 224px;
+  }
+  .g--margin-19\@desktop {
+    margin: 256px;
+  }
+  .g--margin-horizontal-19\@desktop {
+    margin-left: 256px;
+    margin-right: 256px;
+  }
+  .g--margin-vertical-19\@desktop {
+    margin-top: 256px;
+    margin-bottom: 256px;
+  }
+  .g--margin-top-19\@desktop {
+    margin-top: 256px;
+  }
+  .g--margin-bottom-19\@desktop {
+    margin-bottom: 256px;
+  }
+  .g--margin-left-19\@desktop {
+    margin-left: 256px;
+  }
+  .g--margin-right-19\@desktop {
+    margin-right: 256px;
+  }
+  .g--margin-20\@desktop {
+    margin: 320px;
+  }
+  .g--margin-horizontal-20\@desktop {
+    margin-left: 320px;
+    margin-right: 320px;
+  }
+  .g--margin-vertical-20\@desktop {
+    margin-top: 320px;
+    margin-bottom: 320px;
+  }
+  .g--margin-top-20\@desktop {
+    margin-top: 320px;
+  }
+  .g--margin-bottom-20\@desktop {
+    margin-bottom: 320px;
+  }
+  .g--margin-left-20\@desktop {
+    margin-left: 320px;
+  }
+  .g--margin-right-20\@desktop {
+    margin-right: 320px;
+  }
+  .g--margin-21\@desktop {
+    margin: 480px;
+  }
+  .g--margin-horizontal-21\@desktop {
+    margin-left: 480px;
+    margin-right: 480px;
+  }
+  .g--margin-vertical-21\@desktop {
+    margin-top: 480px;
+    margin-bottom: 480px;
+  }
+  .g--margin-top-21\@desktop {
+    margin-top: 480px;
+  }
+  .g--margin-bottom-21\@desktop {
+    margin-bottom: 480px;
+  }
+  .g--margin-left-21\@desktop {
+    margin-left: 480px;
+  }
+  .g--margin-right-21\@desktop {
+    margin-right: 480px;
+  }
+  .g--margin-22\@desktop {
+    margin: 640px;
+  }
+  .g--margin-horizontal-22\@desktop {
+    margin-left: 640px;
+    margin-right: 640px;
+  }
+  .g--margin-vertical-22\@desktop {
+    margin-top: 640px;
+    margin-bottom: 640px;
+  }
+  .g--margin-top-22\@desktop {
+    margin-top: 640px;
+  }
+  .g--margin-bottom-22\@desktop {
+    margin-bottom: 640px;
+  }
+  .g--margin-left-22\@desktop {
+    margin-left: 640px;
+  }
+  .g--margin-right-22\@desktop {
+    margin-right: 640px;
+  }
+  .g--margin-23\@desktop {
+    margin: auto;
+  }
+  .g--margin-horizontal-23\@desktop {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .g--margin-vertical-23\@desktop {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .g--margin-top-23\@desktop {
+    margin-top: auto;
+  }
+  .g--margin-bottom-23\@desktop {
+    margin-bottom: auto;
+  }
+  .g--margin-left-23\@desktop {
+    margin-left: auto;
+  }
+  .g--margin-right-23\@desktop {
+    margin-right: auto;
+  }
+}
 .g--font-size-xxs {
   font-size: 10px;
 }
@@ -3447,6 +9503,189 @@ table {
   font-size: 64px;
 }
 
+.g--font-size-7xl {
+  font-size: 128px;
+}
+
+.g--font-size-8xl {
+  font-size: 160px;
+}
+
+.g--font-size-9xl {
+  font-size: 256px;
+}
+
+.g--font-size-10xl {
+  font-size: 512px;
+}
+
+.g--font-size-11xl {
+  font-size: 1024px;
+}
+
+.g--font-size-12xl {
+  font-size: 2048px;
+}
+
+@media (min-width: 1250px) {
+  .g--font-size-xxs\@mobil {
+    font-size: 10px;
+  }
+  .g--font-size-xs\@mobil {
+    font-size: 12px;
+  }
+  .g--font-size-s\@mobil {
+    font-size: 14px;
+  }
+  .g--font-size-m\@mobil {
+    font-size: 16px;
+  }
+  .g--font-size-l\@mobil {
+    font-size: 18px;
+  }
+  .g--font-size-xl\@mobil {
+    font-size: 20px;
+  }
+  .g--font-size-2xl\@mobil {
+    font-size: 24px;
+  }
+  .g--font-size-3xl\@mobil {
+    font-size: 30px;
+  }
+  .g--font-size-4xl\@mobil {
+    font-size: 36px;
+  }
+  .g--font-size-5xl\@mobil {
+    font-size: 48px;
+  }
+  .g--font-size-6xl\@mobil {
+    font-size: 64px;
+  }
+  .g--font-size-7xl\@mobil {
+    font-size: 128px;
+  }
+  .g--font-size-8xl\@mobil {
+    font-size: 160px;
+  }
+  .g--font-size-9xl\@mobil {
+    font-size: 256px;
+  }
+  .g--font-size-10xl\@mobil {
+    font-size: 512px;
+  }
+  .g--font-size-11xl\@mobil {
+    font-size: 1024px;
+  }
+  .g--font-size-12xl\@mobil {
+    font-size: 2048px;
+  }
+}
+@media (min-width: 1500px) {
+  .g--font-size-xxs\@tablet {
+    font-size: 10px;
+  }
+  .g--font-size-xs\@tablet {
+    font-size: 12px;
+  }
+  .g--font-size-s\@tablet {
+    font-size: 14px;
+  }
+  .g--font-size-m\@tablet {
+    font-size: 16px;
+  }
+  .g--font-size-l\@tablet {
+    font-size: 18px;
+  }
+  .g--font-size-xl\@tablet {
+    font-size: 20px;
+  }
+  .g--font-size-2xl\@tablet {
+    font-size: 24px;
+  }
+  .g--font-size-3xl\@tablet {
+    font-size: 30px;
+  }
+  .g--font-size-4xl\@tablet {
+    font-size: 36px;
+  }
+  .g--font-size-5xl\@tablet {
+    font-size: 48px;
+  }
+  .g--font-size-6xl\@tablet {
+    font-size: 64px;
+  }
+  .g--font-size-7xl\@tablet {
+    font-size: 128px;
+  }
+  .g--font-size-8xl\@tablet {
+    font-size: 160px;
+  }
+  .g--font-size-9xl\@tablet {
+    font-size: 256px;
+  }
+  .g--font-size-10xl\@tablet {
+    font-size: 512px;
+  }
+  .g--font-size-11xl\@tablet {
+    font-size: 1024px;
+  }
+  .g--font-size-12xl\@tablet {
+    font-size: 2048px;
+  }
+}
+@media (min-width: 1600px) {
+  .g--font-size-xxs\@desktop {
+    font-size: 10px;
+  }
+  .g--font-size-xs\@desktop {
+    font-size: 12px;
+  }
+  .g--font-size-s\@desktop {
+    font-size: 14px;
+  }
+  .g--font-size-m\@desktop {
+    font-size: 16px;
+  }
+  .g--font-size-l\@desktop {
+    font-size: 18px;
+  }
+  .g--font-size-xl\@desktop {
+    font-size: 20px;
+  }
+  .g--font-size-2xl\@desktop {
+    font-size: 24px;
+  }
+  .g--font-size-3xl\@desktop {
+    font-size: 30px;
+  }
+  .g--font-size-4xl\@desktop {
+    font-size: 36px;
+  }
+  .g--font-size-5xl\@desktop {
+    font-size: 48px;
+  }
+  .g--font-size-6xl\@desktop {
+    font-size: 64px;
+  }
+  .g--font-size-7xl\@desktop {
+    font-size: 128px;
+  }
+  .g--font-size-8xl\@desktop {
+    font-size: 160px;
+  }
+  .g--font-size-9xl\@desktop {
+    font-size: 256px;
+  }
+  .g--font-size-10xl\@desktop {
+    font-size: 512px;
+  }
+  .g--font-size-11xl\@desktop {
+    font-size: 1024px;
+  }
+  .g--font-size-12xl\@desktop {
+    font-size: 2048px;
+  }
+}
 .g--shadow-1 {
   -webkit-box-shadow: 0 1px 3px hsla(0, 0%, .2);
   -moz-box-shadow: 0 1px 3px hsla(0, 0%, .2);
@@ -3483,6 +9722,218 @@ table {
   box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
 }
 
+@media (min-width: 1250px) {
+  .g--shadow-1\@mobil {
+    -webkit-box-shadow: 0 1px 3px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 1px 3px hsla(0, 0%, .2);
+    box-shadow: 0 1px 3px hsla(0, 0%, .2);
+  }
+  .g--shadow-2\@mobil {
+    -webkit-box-shadow: 0 4px 6px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 4px 6px hsla(0, 0%, .2);
+    box-shadow: 0 4px 6px hsla(0, 0%, .2);
+  }
+  .g--shadow-3\@mobil {
+    -webkit-box-shadow: 0 4px 6px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 4px 6px hsla(0, 0%, .2);
+    box-shadow: 0 4px 6px hsla(0, 0%, .2);
+  }
+  .g--shadow-4\@mobil {
+    -webkit-box-shadow: 0 10px 24px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 10px 24px hsla(0, 0%, .2);
+    box-shadow: 0 10px 24px hsla(0, 0%, .2);
+  }
+  .g--shadow-5\@mobil {
+    -webkit-box-shadow: 0 15px 35px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 15px 35px hsla(0, 0%, .2);
+    box-shadow: 0 15px 35px hsla(0, 0%, .2);
+  }
+  .g--shadow-6\@mobil {
+    -webkit-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+    -moz-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+  }
+}
+@media (min-width: 1500px) {
+  .g--shadow-1\@tablet {
+    -webkit-box-shadow: 0 1px 3px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 1px 3px hsla(0, 0%, .2);
+    box-shadow: 0 1px 3px hsla(0, 0%, .2);
+  }
+  .g--shadow-2\@tablet {
+    -webkit-box-shadow: 0 4px 6px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 4px 6px hsla(0, 0%, .2);
+    box-shadow: 0 4px 6px hsla(0, 0%, .2);
+  }
+  .g--shadow-3\@tablet {
+    -webkit-box-shadow: 0 4px 6px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 4px 6px hsla(0, 0%, .2);
+    box-shadow: 0 4px 6px hsla(0, 0%, .2);
+  }
+  .g--shadow-4\@tablet {
+    -webkit-box-shadow: 0 10px 24px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 10px 24px hsla(0, 0%, .2);
+    box-shadow: 0 10px 24px hsla(0, 0%, .2);
+  }
+  .g--shadow-5\@tablet {
+    -webkit-box-shadow: 0 15px 35px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 15px 35px hsla(0, 0%, .2);
+    box-shadow: 0 15px 35px hsla(0, 0%, .2);
+  }
+  .g--shadow-6\@tablet {
+    -webkit-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+    -moz-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+  }
+}
+@media (min-width: 1600px) {
+  .g--shadow-1\@desktop {
+    -webkit-box-shadow: 0 1px 3px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 1px 3px hsla(0, 0%, .2);
+    box-shadow: 0 1px 3px hsla(0, 0%, .2);
+  }
+  .g--shadow-2\@desktop {
+    -webkit-box-shadow: 0 4px 6px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 4px 6px hsla(0, 0%, .2);
+    box-shadow: 0 4px 6px hsla(0, 0%, .2);
+  }
+  .g--shadow-3\@desktop {
+    -webkit-box-shadow: 0 4px 6px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 4px 6px hsla(0, 0%, .2);
+    box-shadow: 0 4px 6px hsla(0, 0%, .2);
+  }
+  .g--shadow-4\@desktop {
+    -webkit-box-shadow: 0 10px 24px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 10px 24px hsla(0, 0%, .2);
+    box-shadow: 0 10px 24px hsla(0, 0%, .2);
+  }
+  .g--shadow-5\@desktop {
+    -webkit-box-shadow: 0 15px 35px hsla(0, 0%, .2);
+    -moz-box-shadow: 0 15px 35px hsla(0, 0%, .2);
+    box-shadow: 0 15px 35px hsla(0, 0%, .2);
+  }
+  .g--shadow-6\@desktop {
+    -webkit-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+    -moz-box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+  }
+}
+.g--bg-color-blue {
+  background-color: blue;
+}
+
+.g--bg-color-red {
+  background-color: red;
+}
+
+.g--bg-color-green {
+  background-color: green;
+}
+
+.g--bg-color-orange {
+  background-color: orange;
+}
+
+@media (min-width: 1250px) {
+  .g--bg-color-blue\@mobil {
+    background-color: blue;
+  }
+  .g--bg-color-red\@mobil {
+    background-color: red;
+  }
+  .g--bg-color-green\@mobil {
+    background-color: green;
+  }
+  .g--bg-color-orange\@mobil {
+    background-color: orange;
+  }
+}
+@media (min-width: 1500px) {
+  .g--bg-color-blue\@tablet {
+    background-color: blue;
+  }
+  .g--bg-color-red\@tablet {
+    background-color: red;
+  }
+  .g--bg-color-green\@tablet {
+    background-color: green;
+  }
+  .g--bg-color-orange\@tablet {
+    background-color: orange;
+  }
+}
+@media (min-width: 1600px) {
+  .g--bg-color-blue\@desktop {
+    background-color: blue;
+  }
+  .g--bg-color-red\@desktop {
+    background-color: red;
+  }
+  .g--bg-color-green\@desktop {
+    background-color: green;
+  }
+  .g--bg-color-orange\@desktop {
+    background-color: orange;
+  }
+}
+.g--text-aling-center {
+  text-align: center;
+}
+
+.g--text-aling-left {
+  text-align: left;
+}
+
+.g--text-aling-right {
+  text-align: right;
+}
+
+.g--text-aling-justify {
+  text-align: justify;
+}
+
+@media (min-width: 1250px) {
+  .g--text-aling-center\@mobil {
+    text-align: center;
+  }
+  .g--text-aling-left\@mobil {
+    text-align: left;
+  }
+  .g--text-aling-right\@mobil {
+    text-align: right;
+  }
+  .g--text-aling-justify\@mobil {
+    text-align: justify;
+  }
+}
+@media (min-width: 1500px) {
+  .g--text-aling-center\@tablet {
+    text-align: center;
+  }
+  .g--text-aling-left\@tablet {
+    text-align: left;
+  }
+  .g--text-aling-right\@tablet {
+    text-align: right;
+  }
+  .g--text-aling-justify\@tablet {
+    text-align: justify;
+  }
+}
+@media (min-width: 1600px) {
+  .g--text-aling-center\@desktop {
+    text-align: center;
+  }
+  .g--text-aling-left\@desktop {
+    text-align: left;
+  }
+  .g--text-aling-right\@desktop {
+    text-align: right;
+  }
+  .g--text-aling-justify\@desktop {
+    text-align: justify;
+  }
+}
 .g--clear-list {
   list-style: none;
 }

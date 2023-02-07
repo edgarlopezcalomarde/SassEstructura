@@ -179,3 +179,8 @@
 //     }
 //   }
 
+//medias
+
+@function getMedia($key){
+    @return map-get($medias,$key);
+}

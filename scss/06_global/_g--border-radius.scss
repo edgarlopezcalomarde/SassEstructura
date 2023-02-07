@@ -5,9 +5,16 @@
 }
 
 
+@each $media, $medvalue in $medias {
+    @media (min-width: $medvalue) {
 
-// @for $i from 1 to length($border-radius){
-//     .g--border-radius-#{$i - 1}{
-//         border-radius: nth($border-radius,$i);
-//     }
-// }
+        @each $key in getBorderRadiusKeys(){
+            .g--border-radius-#{$key}\@#{$media}{
+                border-radius: getBorderRadius($key);
+            }
+        }
+        
+         
+    }
+}
+  

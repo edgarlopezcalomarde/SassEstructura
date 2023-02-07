@@ -17,7 +17,7 @@ $border-radius: (0px,2px,4px,6px,8px,16px,32px,64px);
 
 
 $padding: (0px,4px,6px,8px,10px,12px,16px,20px,24px,32px,40px,48px,64px,80px,96px,128px,160px,192px,224px,256px,320px,480px,640px);
-$margins:(0px,4px,6px,8px,10px,12px,16px,20px,24px,32px,40px,48px,64px,80px,96px,128px,160px,192px,224px,256px,320px,480px,640px);
+$margins:(0px,4px,6px,8px,10px,12px,16px,20px,24px,32px,40px,48px,64px,80px,96px,128px,160px,192px,224px,256px,320px,480px,640px, auto);
 
 $gap:(0px,4px,6px,8px,10px,12px,16px,20px,24px,32px,40px,48px,64px,80px,96px,128px,160px,192px,224px,256px,320px,480px,640px);
 
@@ -32,8 +32,31 @@ $font-sizes: (
     "3xl":30px, 
     "4xl":36px, 
     "5xl":48px, 
-    "6xl":64px
+    "6xl":64px,
+    "7xl":128px,
+    "8xl":160px,
+    "9xl":256px,
+    "10xl":512px,
+    "11xl":1024px,
+    "12xl":2048px,
 );
 
 
 $profundidades:("0 1px 3px hsla(0, 0%, .2)" , "0 4px 6px hsla(0, 0%, .2)" , "0 4px 6px hsla(0, 0%, .2)", "0 10px 24px hsla(0, 0%, .2)", "0 15px 35px hsla(0, 0%, .2)", "0 3px 6px 0 rgb(0 0 0 / 16%)");
+
+
+$colores:(
+    "blue":blue,
+    "red": red,
+    "green":green,
+    "orange":orange
+);
+
+$medias:(
+    "mobil":1250px,
+    "tablet":1500px,
+    "desktop":1600px
+);
+
+
+$aligns:(center, left, right, justify);

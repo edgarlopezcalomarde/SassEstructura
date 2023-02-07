@@ -5,3 +5,20 @@
         }
     }
 }
+
+@each $media, $medvalue in $medias {
+    @media (min-width: $medvalue) {
+
+
+        @each $colortype in getColorKeys() {
+            @for $contador from 0 to getColorVariants($colortype){
+                .g--color-#{$colortype}-#{$contador}\@#{$media}{
+                    color: getColor($colortype,$contador); 
+                }
+            }
+        }
+        
+         
+    }
+}
+  
