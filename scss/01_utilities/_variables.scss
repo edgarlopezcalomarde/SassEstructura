@@ -42,8 +42,14 @@ $font-sizes: (
 );
 
 
-$profundidades:("0 1px 3px hsla(0, 0%, .2)" , "0 4px 6px hsla(0, 0%, .2)" , "0 4px 6px hsla(0, 0%, .2)", "0 10px 24px hsla(0, 0%, .2)", "0 15px 35px hsla(0, 0%, .2)", "0 3px 6px 0 rgb(0 0 0 / 16%)");
-
+$profundidades: (
+  "0 1px 3px darkgray", 
+  "0 4px 6px darkgray",
+  "0 5px 15px darkgray",
+  "0 10px 24px darkgray",
+  "0 15px 35px darkgray",
+  "0 3px 6px 0 rgb(0 0 0 / 16%)"
+);
 
 $colores:(
     "blue":blue,
