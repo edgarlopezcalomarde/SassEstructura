@@ -184,3 +184,19 @@
 @function getMedia($key){
     @return map-get($medias,$key);
 }
+
+//width
+
+@function getWidth($key) {
+    @return nth($width, $key + 1);
+}
+  
+@function getWidthKeys() {
+    $resultado:();
+    @for $i from 0 to length($width) {
+      $resultado:append($resultado, $i);
+    }
+    
+    @return $resultado;
+  
+}
