@@ -1,3 +1,7 @@
+html {
+  font-size:24px;
+}
+
 h1 {
   font-size: clamp(100px, 10vw, 150px);
 }
@@ -53,4 +57,48 @@ h1 {
 
 .c-img--fluida{
   width: 100vw;
+}
+
+
+/*Ej5*/
+
+.c-menu{
+  background-color: rgb(170, 228, 228);
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 20px;
+}
+
+.c-cuerpo{
+  background-color: rgb(229, 174, 174);
+  width: 100vw;
+  height: 80vh;
+}
+
+.c-menu-lateral{
+  display: none;
+}
+
+.c-footer{
+
+  height: 10vh;
+  background-color: rgb(180, 136, 221);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (min-width: 500px) {
+
+  .c-menu-lateral{
+    display: block;
+    background-color: rgb(37, 226, 163);
+    width: 20vw;
+    height: 80vh;
+  }
+  
 }

@@ -213,6 +213,23 @@
 }
 
 
+//width
+
+@function getOpacity($key) {
+    @return nth($opacities, $key + 1);
+}
+  
+@function getOpacityKeys() {
+    $resultado:();
+    @for $i from 0 to length($opacities) {
+      $resultado:append($resultado, $i);
+    }
+    
+    @return $resultado;
+  
+}
+
+
 @function getTextFamily($key) {
     $textType : map-get($texto, $key);
     @return map-get($textType, "font-family");

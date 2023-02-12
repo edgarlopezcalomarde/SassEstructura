@@ -1,0 +1,20 @@
+@each $key in getOpacityKeys(){
+    .g--opacity-#{$key}{
+       opacity: getOpacity($key);
+    }
+}
+
+
+@each $media, $medvalue in $medias {
+
+    @media (min-width: $medvalue) {
+
+        @each $key in getOpacityKeys(){
+            .g--opacity-#{$key}\@#{$media}{
+               opacity: getOpacity($key);
+            }
+        }
+       
+    }
+}
+  
