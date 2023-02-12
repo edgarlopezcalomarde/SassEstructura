@@ -12,7 +12,6 @@
 
 @import 
 '04_components/c-button',
-'04_components/c-panel',
 '04_components/c-text',
 '04_components/c-menu';
 
@@ -28,6 +27,9 @@
 '06_global/g--bg',
 '06_global/g--text-align',
 '06_global/g--width',
+'06_global/g--texto',
+'06_global/g--font-weight',
+'06_global/g--font-family',
 '06_global/g--clear--list';
 
 //sass --watch  .\scss\main.scss .\css\main.css

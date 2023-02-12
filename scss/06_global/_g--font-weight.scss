@@ -1,0 +1,24 @@
+
+@each $key in getFontWeightKeys(){
+    .g--font-weight-#{$key}{
+        font-weight: getFontWeight($key);
+    }
+}
+
+
+// @each $media, $medvalue in $medias {
+
+//     @media (min-width: $medvalue) {
+        
+//         @each $fontkey, $fontvalue in  getFontWeightKeys() {
+           
+//             .g--font-weight-#{$key}\@#{$media}{
+//                 font-weight: $weight;
+//             }
+        
+//         }
+       
+
+//     }
+// }
+  

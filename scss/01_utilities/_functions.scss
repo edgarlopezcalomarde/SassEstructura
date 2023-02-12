@@ -113,8 +113,19 @@
 }
 
 //Font Weight
+
+@function getFontWeightKeys() {
+    $resultado:();
+    @for $i from 0 to length($weights) {
+      $resultado:append($resultado, $i);
+    }
+    
+    @return $resultado;
+}
+
+
 @function getFontWeight($key){
-    @return nth($weights, $key);
+    @return nth($weights, $key + 1);
 }
 
 //Font Size
@@ -199,4 +210,26 @@
     
     @return $resultado;
   
+}
+
+
+@function getTextFamily($key) {
+    $textType : map-get($texto, $key);
+    @return map-get($textType, "font-family");
+}
+  
+@function getTextSizes($key) {
+    $textType : map-get($texto, $key);
+    @return map-get($textType, "font-sizes");
+}
+  
+@function getTextKeys(){
+    @return map-keys($texto);
+}
+
+
+/*Fuentes*/
+
+@function getFontFamily($key){
+    @return map-get($fuentes,$key);
 }

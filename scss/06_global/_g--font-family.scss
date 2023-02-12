@@ -1,0 +1,24 @@
+
+
+
+@each $key, $font in $fuentes{
+    .g--font-family-#{$key}{
+       font-family: $font;
+    }
+}
+
+
+@each $media, $medvalue in $medias {
+
+    @media (min-width: $medvalue) {
+        
+        @each $fontkey, $fontvalue in  $fuentes {
+            .g--font-family-#{$fontkey}\@#{$media} {
+                font-family: $fontvalue;
+            }
+        
+        }
+       
+    }
+}
+  

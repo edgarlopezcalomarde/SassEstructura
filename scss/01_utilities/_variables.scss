@@ -59,11 +59,38 @@ $colores:(
 );
 
 $medias:(
-    "mobil":1250px,
-    "tablet":1500px,
-    "desktop":1600px
+    "mobil":670px,
+    "tablet":900px,
+    "desktop":1200px
 );
 
 
 $aligns:(center, left, right, justify);
-$width:(100px, 150px , 200px, 250px, 300px, 350px, 400px, 450px, 500px, 550px, 600px)
+$width:(100px, 150px , 200px, 250px, 300px, 350px, 400px, 450px, 500px, 550px, 600px, 800px, 1068px, 1200px);
+
+$texto:(
+   "parrafo":(
+      "font-family":"Arial",
+      "font-sizes":(
+         "s":40px,
+         "m":45px,
+         "l":50px,
+         "xl":60px,
+      )
+   ),
+   "titulo":(
+      "font-family":"Times New Roman",
+      "font-sizes":(
+         "xs":40px,
+         "s":45px,
+         "m":50px,
+         "l":60px,
+      )
+   )
+);
+
+
+
+$fuentes:(
+   "lato" : "Lato"
+);

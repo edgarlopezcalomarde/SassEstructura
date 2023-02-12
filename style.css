@@ -1,59 +1,46 @@
-.g--bg-color-red {
-    background-color:red;
-}
-.g--bg-color-green {
-    background-color:green;
-}
-.g--bg-color-blue {
-    background-color:blue;
-}
-.g--bg-color-orange {
-    background-color:orange;
+h1 {
+  font-size: clamp(100px, 10vw, 150px);
 }
 
-
-@media (min-width: 572px) {
-    .g--bg-color-red\@mobil {
-        background-color:red;
-    }
-    .g--bg-color-green\@mobil {
-        background-color:green;
-    }
-    .g--bg-color-blue\@mobil {
-        background-color:blue;
-    }
-    .g--bg-color-orange\@mobil {
-        background-color:orange;
-    }
+.red {
+  color: red;
 }
 
-
-@media (min-width: 768px) {
-    .g--bg-color-red\@tablet {
-        background-color:red;
-    }
-    .g--bg-color-green\@tablet {
-        background-color:green;
-    }
-    .g--bg-color-blue\@tablet {
-        background-color:blue;
-    }
-    .g--bg-color-orange\@tablet {
-        background-color:orange;
-    }
+.c-titulo {
+  font-size: min(100px, 10vw);
 }
 
-@media (min-width: 992px) {
-    .g--bg-color-red\@desktop {
-        background-color:red;
-    }
-    .g--bg-color-green\@desktop {
-        background-color:green;
-    }
-    .g--bg-color-blue\@desktop {
-        background-color:blue;
-    }
-    .g--bg-color-orange\@desktop {
-        background-color:orange;
-    }
+.c-titulo2 {
+  font-size: max(100px, 10vw);
+}
+
+.c-titulo3 {
+  font-size: calc(10vw - 10px);
+}
+
+.c-titulo4 {
+  font-size: clamp(40px, calc(10vw - 10px), 100px);
+}
+
+.c-table {
+  overflow: auto;
+}
+
+.c-table__head--min-width-1 {
+  min-width: 100px;
+}
+.c-table__head--min-width-2 {
+  min-width: 150px;
+}
+.c-table__head--min-width-3 {
+  min-width: 200px;
+}
+.c-table__head--max-width-1 {
+  max-width: 100px;
+}
+.c-table__head--max-width-2 {
+  max-width: 150px;
+}
+.c-table__head--max-width-3 {
+  max-width: 200px;
 }
